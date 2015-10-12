@@ -137,7 +137,7 @@ void communication_sendIntMsg(int left, int right)
 	if(communicationData.TxMsgSeq == 0x7F)
 		communicationData.TxMsgSeq = 0x00;
 	PLIB_INT_SourceEnable(INT_ID_0, INT_SOURCE_USART_4_TRANSMIT);	//ENABLE TX INTERRUPT
-    debugU("\ntransmitting...");
+    debugU("\ntransmitting...\n");
 }
 
 unsigned char communication_getByteISR()
@@ -275,14 +275,13 @@ void COMMUNICATION_Initialize ( void )
 
 void COMMUNICATION_Tasks ( void )
 {
+    communication_sendIntMsg(65, 65);
 	while(1)
-	{
+	{      
 		//check if queue exists
 		if(communicationData.theQueue != 0)	
 		{
-            
-            
-            
+                    
 			//receive a message and store into rxMessage ... block 5 ticks if empty queue
 			if(xQueuePeek(communicationData.theQueue, (void*)&(communicationData.rxMessage), portMAX_DELAY ))
 			{
@@ -299,14 +298,15 @@ void COMMUNICATION_Tasks ( void )
 						break;
 
 					case COMMUNICATION_STATE_RECEIVE:	//1
-						debugU("COM rx: ");
-						debugUInt(communicationData.rxMessage.msg);
+						//debugU("receive from rover");
+						//debugUInt(communicationData.rxMessage.msg);
 						if(communicationData.rxMessage.msg == STARTBYTE)	//received start transmit bit
 						{
 							if(communicationData.rxByteCount > 0)	//we had part of a previous message...
 							{
-								debugU("NACK");
+								debugU("rover NACK");
 								//NACK;
+                                communicationData.rxByteCount = 0;
 							}
 							communicationData.rxBuffer[0] = communicationData.rxMessage.msg;
 							communicationData.rxByteCount = 1;	
@@ -342,14 +342,22 @@ void COMMUNICATION_Tasks ( void )
 									duration += CharToInt(communicationData.rxBuffer[7]) * 100;
 									duration += CharToInt(communicationData.rxBuffer[8]) * 10;
 									duration += CharToInt(communicationData.rxBuffer[9]);
+                                    
+                                    int delay = 0;
+                                    while(delay != 100000000)
+                                    {
+                                        delay++;
+                                    }
+                                    communication_sendIntMsg(65, 65);
 
 									debugU("Rover1:");
-									char msg[12];
-									sprintf(msg, "%d", command);
-									debugU(msg);
+									//char msg[12];
+									//sprintf(msg, "%d", command);
+									debugUInt(command);
+                                    
 									debugU("Rover2:");
-									sprintf(msg, "%d", duration);
-									debugU(msg);
+									//sprintf(msg, "%d", duration);
+									debugUInt(duration);
 									communicationData.rxByteCount = 0;
 									communicationData.RxMsgSeq++;
 									if(communicationData.RxMsgSeq == 0x7F)
@@ -357,6 +365,7 @@ void COMMUNICATION_Tasks ( void )
 									//ACK
                                     PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, 0);
 									debugU("\nACK comm\n");
+                                  
 //#ifdef TEST
 //                                    testData.count++; // Increment message count
 //                                    int j =0;
@@ -380,7 +389,7 @@ void COMMUNICATION_Tasks ( void )
 						else	//failed to receive start bit and catch all... nack and reset message
 						{
 							//NACK
-							debugU("\nNACK");
+							debugU("\nrover NACK");
 							communicationData.rxByteCount = 0;	//no start byte and bytecount != 0, so unknown char drop it
 						}
 						break;

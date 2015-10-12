@@ -161,7 +161,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/configRover</Path>
-        <Checksum>8E52F95150F90908F7380D5B4259D427</Checksum>
+        <Checksum>9C0756F029439EC9354E12429D463E27</Checksum>
       </Template>
       <Template>
         <Name>sensorCommunication.c</Name>
@@ -187,9 +187,14 @@
         <Checksum>9E18DF3A342F8E589B563457001B5CDF</Checksum>
       </Template>
       <Template>
+        <Name>drv_tmr_static.h</Name>
+        <Path>Header Files/app/system_config/configRover/framework/driver/tmr</Path>
+        <Checksum>1EEAFE0A143AFA7C44B680539F52062B</Checksum>
+      </Template>
+      <Template>
         <Name>system_interrupt_a.S</Name>
         <Path>Source Files/app/system_config/configRover</Path>
-        <Checksum>BE263D6FF7AC8FB41CC06460DA091054</Checksum>
+        <Checksum>C1204D2423A97BA47CCE23A11DB53214</Checksum>
       </Template>
       <Template>
         <Name>system_tasks.c</Name>
@@ -199,7 +204,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/configRover</Path>
-        <Checksum>633AB54E77854FA1D576583AD9CAB0B2</Checksum>
+        <Checksum>59521047FD9F24B313C1AEC0A6D151DA</Checksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
@@ -214,7 +219,7 @@
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/configRover</Path>
-        <Checksum>987C2DA40FC74F6546F1315D5EB4680D</Checksum>
+        <Checksum>2A11EA7F50106852C9E375294A23691C</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.c</Name>
@@ -222,9 +227,14 @@
         <Checksum>1B968DA82B5DD869A6119C3B7628D753</Checksum>
       </Template>
       <Template>
+        <Name>drv_tmr_static.c</Name>
+        <Path>Source Files/app/system_config/configRover/framework/driver/tmr/src</Path>
+        <Checksum>F14F79BF6034CD0309534ED34ADC2510</Checksum>
+      </Template>
+      <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/configRover</Path>
-        <Checksum>FA3B226A71DD4F612EFFF59EB12C0F0E</Checksum>
+        <Checksum>25B19983A61980AEFDB17C52E0A70169</Checksum>
       </Template>
       <Template>
         <Name>motor.h</Name>

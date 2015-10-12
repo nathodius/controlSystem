@@ -72,6 +72,35 @@ build/configRover/production/_ext/369138285/system_init.o:  \
  ../../../../microchip/harmony/v1_06/framework/peripheral/int/processor/../templates/int_VariableOffset_Unsupported.h  \
  ../../../../microchip/harmony/v1_06/framework/peripheral/int/processor/../templates/int_SoftwareNMI_Unsupported.h  \
  ../../../../microchip/harmony/v1_06/framework/system/int/sys_int_mapping.h  \
+ ../src/system_config/configRover/framework/driver/tmr/drv_tmr_static.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/plib_tmr.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/tmr_processor.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/tmr_p32xxxx.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/tmr_p32mx795f512l.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_GatedTimeAccumulation_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_ClockSource_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Prescale_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_ClockSourceSync_Inverted.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_ClockSourceSync_Unsupported.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Mode16Bit_Unsupported.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Mode16Bit_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Mode32Bit_Unsupported.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Mode32Bit_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_EnableControl_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_StopInIdle_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Counter16Bit_In16BitRegister.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Counter32Bit_Unsupported.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Counter32Bit_In16BitRegister.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Counter32Bit_In16BitRegister_high.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Period16Bit_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Period32Bit_Unsupported.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Period32Bit_In16BitRegister_pic32.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_Period32Bit_In16BitRegister_high.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_CounterAsyncWriteControl_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_CounterAsyncWriteControl_Unsupported.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_CounterAsyncWriteInProgress_Default.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_CounterAsyncWriteInProgress_Unsupported.h  \
+ ../../../../microchip/harmony/v1_06/framework/peripheral/tmr/processor/../templates/tmr_TimerOperationMode_Default.h  \
  ../src/system_config/configRover/framework/driver/usart/drv_usart_static.h  \
  ../../../../microchip/harmony/v1_06/framework/peripheral/usart/plib_usart.h  \
  ../../../../microchip/harmony/v1_06/framework/peripheral/usart/processor/usart_processor.h  \

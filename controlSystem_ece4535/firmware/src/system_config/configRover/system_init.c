@@ -181,6 +181,9 @@ void SYS_Initialize ( void* data )
     SYS_PORTS_Initialize();
 
     /* Initialize Drivers */
+    /*Initialize TMR0 */
+    DRV_TMR0_Initialize();
+ 
     DRV_USART0_Initialize();
     DRV_USART1_Initialize();
     DRV_USART2_Initialize();

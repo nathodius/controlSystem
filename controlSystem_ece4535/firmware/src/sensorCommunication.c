@@ -397,7 +397,7 @@ void SENSORCOMMUNICATION_Tasks ( void )
 									sprintf(msg, "%d", y);
 									debugU(msg);
                                     
-                                    communication_sendIntMsg(x,y);
+                                    //communication_sendIntMsg(x,y);
                                     
 									sensorcommunicationData.sensorrxByteCount = 0;
 									sensorcommunicationData.sensorRxMsgSeq++;
@@ -428,7 +428,7 @@ void SENSORCOMMUNICATION_Tasks ( void )
 						else	//failed to receive start bit and catch all... nack and reset message
 						{
 							//NACK
-							debugU("\nNACK");
+							debugU("\nsensor NACK");
 							sensorcommunicationData.sensorrxByteCount = 0;	//no start byte and bytecount != 0, so unknown char drop it
 						}
 						break;

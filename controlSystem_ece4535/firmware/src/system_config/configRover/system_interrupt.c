@@ -73,6 +73,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+void IntHandlerDrvTmrInstance0(void)
+
+{
+
+    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_5);
+
+}
+ 
 void IntHandlerDrvUsartInstance0(void)
 {
 
@@ -128,7 +136,7 @@ void IntHandlerDrvUsartInstance1(void)
  
  
  
-
+// rover
 void IntHandlerDrvUsartInstance2(void)
 {
 
@@ -138,7 +146,8 @@ void IntHandlerDrvUsartInstance2(void)
 		while(!DRV_USART2_ReceiverBufferIsEmpty()) //grab everyhting in the buffer
 		{
 			unsigned char msg = DRV_USART2_ReadByte(); // read received byte
-			communication_sendmsgISR(msg,2);
+            //debugUInt(msg);
+			communication_sendmsgISR(msg,1);
 		}
 	}
 	if(PLIB_INT_SourceFlagGet(INT_ID_0, INT_SOURCE_USART_4_TRANSMIT))
@@ -149,22 +158,13 @@ void IntHandlerDrvUsartInstance2(void)
 			unsigned char txChar;
 			txChar = communication_getByteISR();
 			DRV_USART2_WriteByte(txChar);
-#ifdef DEBUG
-			debugU("COM tx: ");
-			debugUInt(txChar);
-#endif
-		}
-//		else
-//		{
-//			PLIB_INT_SourceDisable(INT_ID_0, INT_SOURCE_USART_2_TRANSMIT);	//disable int due to empty xmit
-//		}
-		PLIB_INT_SourceDisable(INT_ID_0, INT_SOURCE_USART_4_TRANSMIT);	//disable int due to empty xmit
-	}
+            PLIB_INT_SourceDisable(INT_ID_0, INT_SOURCE_USART_4_TRANSMIT);	//disable int due to empty xmit
+        }
     /* Clear pending interrupt */
     PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_4_TRANSMIT);
     PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_4_RECEIVE);
     PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_USART_4_ERROR);
-
+    }
 }
  
  

@@ -56,6 +56,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system/clk/sys_clk_static.h"
 #include "system/devcon/sys_devcon.h"
 #include "system/int/sys_int.h"
+#include "driver/tmr/drv_tmr_static.h"
+#include "peripheral/int/plib_int.h"
 #include "driver/usart/drv_usart_static.h"
 #include "peripheral/usart/plib_usart.h"
 #include "peripheral/int/plib_int.h"
@@ -101,6 +103,7 @@ extern "C" {
 typedef struct
 {
     SYS_MODULE_OBJ  sysDevcon;
+    SYS_MODULE_OBJ  drvTmr0;
 
 } SYSTEM_OBJECTS;
 

@@ -115,7 +115,7 @@ Archive member included because of file (symbol)
 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
                               /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(vector0.o) (_DefaultInterrupt)
 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
-                              build/configRover/production/_ext/1360937237/sensorCommunication.o (_sprintf_cdnopuxX)
+                              build/configRover/production/_ext/1536116519/debug.o (_sprintf_cdnopuxX)
 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
                               /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo) (_vfprintf_cdnopuxX)
 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
@@ -143,7 +143,11 @@ Common symbol       size              file
 sensorcommunicationData
                     0x48              build/configRover/production/_ext/1360937237/sensorCommunication.o
 testData            0x18              build/configRover/production/_ext/1360937237/communication.o
+lastTime            0x4               build/configRover/production/_ext/1536116519/debug.o
 sysObj              0x8               build/configRover/production/_ext/369138285/system_init.o
+sensor_msTime       0x4               build/configRover/production/_ext/1536116519/debug.o
+sensor_lastTime     0x4               build/configRover/production/_ext/1536116519/debug.o
+msTime              0x4               build/configRover/production/_ext/1536116519/debug.o
 sysDevconObj        0x8               build/configRover/production/_ext/1044950436/sys_devcon.o
 motorData           0x28              build/configRover/production/_ext/1360937237/motor.o
 communicationData   0x44              build/configRover/production/_ext/1360937237/communication.o
@@ -154,154 +158,162 @@ kseg0 Program-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
 .text._vfprintf_cdnopux 0x9d000000          0xad0        2768   
-.text.communication_sen 0x9d000ad0          0x4b0        1200   
-.text                   0x9d000f80          0xd10        3344  App's exec code 
-.text.COMMUNICATION_Tas 0x9d001c90          0x304         772   
-.text.SENSORCOMMUNICATI 0x9d001f94          0x2fc         764   
-.text.xTaskGenericCreat 0x9d002290          0x2e0         736   
-.text.prvTimerTask      0x9d002570          0x264         612   
-.text.xQueueGenericRece 0x9d0027d4          0x24c         588   
-.text.xQueueGenericSend 0x9d002a20          0x208         520   
-.text.MOTOR_Tasks       0x9d002c28          0x1d4         468   
-.DrvTmrInstance0_vector 0x9d002dfc          0x1b4         436   
-.DrvUsartInstance0_vect 0x9d002fb0          0x1b4         436   
-.DrvUsartInstance1_vect 0x9d003164          0x1b4         436   
-.DrvUsartInstance2_vect 0x9d003318          0x1b4         436   
-.text.xTaskIncrementTic 0x9d0034cc          0x19c         412   
-.text                   0x9d003668          0x168         360  App's exec code 
-.text.xTaskResumeAll    0x9d0037d0          0x154         340   
-.text.fputc             0x9d003924          0x144         324   
-.dinit                  0x9d003a68          0x130         304   
-.text.vTaskPriorityInhe 0x9d003b98          0x12c         300   
-.text._flsbuf           0x9d003cc4          0x12c         300   
-.text.DRV_USART1_Initia 0x9d003df0          0x108         264   
-.text.prvUnlockQueue    0x9d003ef8          0x104         260   
-.text.prvSampleTimeNow  0x9d003ffc          0x104         260   
-.rodata                 0x9d004100          0x104         260  Read-only const 
-.text.prvCopyDataToQueu 0x9d004204           0xfc         252   
-.text.xTaskPriorityDisi 0x9d004300           0xf8         248   
-.text.DRV_USART2_Initia 0x9d0043f8           0xec         236   
-.text.sensorcommunicati 0x9d0044e4           0xe8         232   
-.text.xQueueGenericSend 0x9d0045cc           0xe8         232   
-.text.DRV_USART0_Initia 0x9d0046b4           0xe8         232   
-.text.SYS_DEVCON_Perfor 0x9d00479c           0xdc         220   
-.text.vTaskSwitchContex 0x9d004878           0xdc         220   
-.rodata                 0x9d004954           0xdc         220  Read-only const 
-.text.general_exception 0x9d004a30           0xdc         220   
-.text.SYS_Tasks         0x9d004b0c           0xd8         216   
-.text.communication_get 0x9d004be4           0xd4         212   
-.text.xQueueReceiveFrom 0x9d004cb8           0xd4         212   
-.text._mon_putc         0x9d004d8c           0xd4         212   
-.rodata                 0x9d004e60          0x19c         412  Read-only const 
-.text.IntHandlerDrvUsar 0x9d004ffc           0xc8         200   
-.text.IntHandlerDrvUsar 0x9d0050c4           0xc8         200   
-.text.xQueueGenericRese 0x9d00518c           0xc4         196   
-.text.xTaskRemoveFromEv 0x9d005250           0xbc         188   
-.text.pvPortMalloc      0x9d00530c           0xb8         184   
-.text.prvIdleTask       0x9d0053c4           0xb4         180   
-.text.IntToChar         0x9d005478           0xb0         176   
-.rodata                 0x9d005528           0xac         172  Read-only const 
-.text.MOTOR_Initialize  0x9d0055d4           0xac         172   
-.text                   0x9d005680           0xa8         168  App's exec code 
-.text.xTaskCheckForTime 0x9d005728           0xa0         160   
-.text.write             0x9d0057c8           0x9c         156   
-.text.xTimerCreate      0x9d005864           0x98         152   
-.text                   0x9d0058fc           0x98         152  App's exec code 
-.text.xQueueGenericCrea 0x9d005994           0x94         148   
-.text.vTaskPlaceOnEvent 0x9d005a28           0x94         148   
-.text.xTimerGenericComm 0x9d005abc           0x94         148   
-.text.SYS_Initialize    0x9d005b50           0x94         148   
-.text.vTaskDelay        0x9d005be4           0x90         144   
-.text.vTaskStartSchedul 0x9d005c74           0x90         144   
-.text.COMMUNICATION_Ini 0x9d005d04           0x88         136   
-.text.SENSORCOMMUNICATI 0x9d005d8c           0x88         136   
-.text.CharToInt         0x9d005e14           0x7c         124   
-.text.DRV_TMR0_Initiali 0x9d005e90           0x7c         124   
-.text.theTimerInit      0x9d005f0c           0x78         120   
-.text.vQueueWaitForMess 0x9d005f84           0x74         116   
-.text.prvInsertTimerInA 0x9d005ff8           0x74         116   
-.text.prvCheckForValidL 0x9d00606c           0x74         116   
-.text.prvAddCurrentTask 0x9d0060e0           0x70         112   
-.text.vTaskPlaceOnEvent 0x9d006150           0x6c         108   
-.text.vApplicationSetup 0x9d0061bc           0x6c         108   
-.text.vTaskExitCritical 0x9d006228           0x68         104   
-.text._sprintf_cdnopuxX 0x9d006290           0x68         104   
-.text.xTimerCreateTimer 0x9d0062f8           0x60          96   
-.text.vListInsert       0x9d006358           0x5c          92   
-.text.xPortStartSchedul 0x9d0063b4           0x5c          92   
-.text.SYS_DEVCON_System 0x9d006410           0x58          88   
-.text.SYS_CLK_Initializ 0x9d006468           0x58          88   
-.text.main_entry        0x9d0064c0           0x54          84   
-.text.motor_sendmsg     0x9d006514           0x54          84   
-.text.debugU            0x9d006568           0x54          84   
-.text.pxPortInitialiseS 0x9d0065bc           0x54          84   
-.text.vPortIncrementTic 0x9d006610           0x54          84   
-.text.motor_durationTic 0x9d006664           0x50          80   
-.text.prvCopyDataFromQu 0x9d0066b4           0x50          80   
-.text.vTaskEnterCritica 0x9d006704           0x50          80   
-.text.SYS_DEVCON_System 0x9d006754           0x48          72   
-.rodata                 0x9d00679c           0x48          72  Read-only const 
-.text._bootstrap_except 0x9d0067e4           0x48          72   
-.vector_default         0x9d00682c           0x48          72   
-.text.uxListRemove      0x9d006874           0x44          68   
-.text                   0x9d0068b8           0x44          68  App's exec code 
-.text.SYS_PORTS_Initial 0x9d0068fc           0x40          64   
-.text._general_exceptio 0x9d00693c           0x40          64   
-.text.uxPortSetInterrup 0x9d00697c           0x3c          60   
-.text.communication_sen 0x9d0069b8           0x38          56   
-.text.sensorcommunicati 0x9d0069f0           0x38          56   
-.text.debugUInt         0x9d006a28           0x38          56   
-.text.prvResetNextTaskU 0x9d006a60           0x38          56   
-.text.crash             0x9d006a98           0x34          52   
-.text.vListInsertEnd    0x9d006acc           0x30          48   
-.text.DRV_USART1_ReadBy 0x9d006afc           0x30          48   
-.text.DRV_USART2_ReadBy 0x9d006b2c           0x30          48   
-.text.prvTaskExitError  0x9d006b5c           0x2c          44   
-.text.DRV_USART0_WriteB 0x9d006b88           0x2c          44   
-.text.DRV_USART1_WriteB 0x9d006bb4           0x2c          44   
-.text.DRV_USART2_WriteB 0x9d006be0           0x2c          44   
-.text.vApplicationStack 0x9d006c0c           0x2c          44   
-.text.vApplicationMallo 0x9d006c38           0x2c          44   
-.text.communication_Int 0x9d006c64           0x28          40   
-.text.sensorcommunicati 0x9d006c8c           0x28          40   
-.text.pvTaskIncrementMu 0x9d006cb4           0x28          40   
-.text.IntHandlerDrvUsar 0x9d006cdc           0x28          40   
-.rodata                 0x9d006d04           0x48          72  Read-only const 
-.text.main              0x9d006d4c           0x20          32   
-.text.vListInitialise   0x9d006d6c           0x20          32   
-.text.xTaskGetScheduler 0x9d006d8c           0x20          32   
-.text._SYS_Tasks        0x9d006dac           0x20          32   
-.text._COMMUNICATION_Ta 0x9d006dcc           0x20          32   
-.text._MOTOR_Tasks      0x9d006dec           0x20          32   
-.text._SENSORCOMMUNICAT 0x9d006e0c           0x20          32   
-.text.initDebugU        0x9d006e2c           0x1c          28   
-.text.theTimerCallback  0x9d006e48           0x1c          28   
-.text.SYS_DEVCON_JTAGDi 0x9d006e64           0x1c          28   
-.rodata                 0x9d006e80           0x1c          28  Read-only const 
-.text.vPortClearInterru 0x9d006e9c           0x1c          28   
-.text.SYS_INT_Initializ 0x9d006eb8           0x18          24   
-.text.IntHandlerDrvTmrI 0x9d006ed0           0x18          24   
-.rodata                 0x9d006ee8           0x18          24  Read-only const 
-.text                   0x9d006f00           0x18          24  App's exec code 
-.text.SYS_DEVCON_Initia 0x9d006f18           0x14          20   
-.text.vTaskSuspendAll   0x9d006f2c           0x14          20   
-.text.vTaskSetTimeOutSt 0x9d006f40           0x14          20   
-.text.DRV_USART1_Receiv 0x9d006f54           0x14          20   
-.text.DRV_USART2_Receiv 0x9d006f68           0x14          20   
-.rodata                 0x9d006f7c           0x10          16  Read-only const 
-.text.vTaskMissedYield  0x9d006f8c           0x10          16   
-.text.xQueueIsQueueEmpt 0x9d006f9c            0xc          12   
-.text.xTaskGetTickCount 0x9d006fa8            0xc          12   
-.text.SYS_CLK_SystemFre 0x9d006fb4            0xc          12   
-.text.SYS_CLK_Periphera 0x9d006fc0            0xc          12   
-.text.SYS_DEVCON_Tasks  0x9d006fcc            0x8           8   
-.text.vListInitialiseIt 0x9d006fd4            0x8           8   
-.rodata                 0x9d006fdc            0x8           8  Read-only const 
-.text.vPortFree         0x9d006fe4            0x8           8   
-.text._on_reset         0x9d006fec            0x8           8   
-.text._on_bootstrap     0x9d006ff4            0x8           8   
-.rodata                 0x9d006ffc            0x8           8  Read-only const 
-      Total kseg0_program_mem used  :      0x7004       28676  5.5% of 0x80000
+.text.communication_sen 0x9d000ad0          0x4a4        1188   
+.text                   0x9d000f74          0xd10        3344  App's exec code 
+.text.COMMUNICATION_Tas 0x9d001c84          0x300         768   
+.text.SENSORCOMMUNICATI 0x9d001f84          0x2f8         760   
+.text.xTaskGenericCreat 0x9d00227c          0x2e0         736   
+.text.prvTimerTask      0x9d00255c          0x264         612   
+.text.xQueueGenericRece 0x9d0027c0          0x24c         588   
+.text.xQueueGenericSend 0x9d002a0c          0x208         520   
+.text.MOTOR_Tasks       0x9d002c14          0x1d4         468   
+.DrvTmrInstance0_vector 0x9d002de8          0x1b4         436   
+.DrvUsartInstance0_vect 0x9d002f9c          0x1b4         436   
+.DrvUsartInstance1_vect 0x9d003150          0x1b4         436   
+.DrvUsartInstance2_vect 0x9d003304          0x1b4         436   
+.text.xTaskIncrementTic 0x9d0034b8          0x19c         412   
+.text                   0x9d003654          0x168         360  App's exec code 
+.text.xTaskResumeAll    0x9d0037bc          0x154         340   
+.text.fputc             0x9d003910          0x144         324   
+.dinit                  0x9d003a54          0x130         304   
+.text.vTaskPriorityInhe 0x9d003b84          0x12c         300   
+.text._flsbuf           0x9d003cb0          0x12c         300   
+.text.DRV_USART1_Initia 0x9d003ddc          0x108         264   
+.text.prvUnlockQueue    0x9d003ee4          0x104         260   
+.text.prvSampleTimeNow  0x9d003fe8          0x104         260   
+.rodata                 0x9d0040ec          0x104         260  Read-only const 
+.text.prvCopyDataToQueu 0x9d0041f0           0xfc         252   
+.text.xTaskPriorityDisi 0x9d0042ec           0xf8         248   
+.text.DRV_USART2_Initia 0x9d0043e4           0xec         236   
+.text.sensorcommunicati 0x9d0044d0           0xe8         232   
+.text.xQueueGenericSend 0x9d0045b8           0xe8         232   
+.text.DRV_USART0_Initia 0x9d0046a0           0xe8         232   
+.text.SYS_DEVCON_Perfor 0x9d004788           0xdc         220   
+.text.vTaskSwitchContex 0x9d004864           0xdc         220   
+.rodata                 0x9d004940           0xdc         220  Read-only const 
+.text.general_exception 0x9d004a1c           0xdc         220   
+.text.SYS_Tasks         0x9d004af8           0xd8         216   
+.text.communication_get 0x9d004bd0           0xd4         212   
+.text.xQueueReceiveFrom 0x9d004ca4           0xd4         212   
+.text._mon_putc         0x9d004d78           0xd4         212   
+.rodata                 0x9d004e4c            0x4           4  Read-only const 
+.rodata                 0x9d004e50          0x268         616  Read-only const 
+.text.IntHandlerDrvUsar 0x9d0050b8           0xc8         200   
+.text.IntHandlerDrvUsar 0x9d005180           0xc8         200   
+.text.xQueueGenericRese 0x9d005248           0xc4         196   
+.text.xTaskRemoveFromEv 0x9d00530c           0xbc         188   
+.text.pvPortMalloc      0x9d0053c8           0xb8         184   
+.text.prvIdleTask       0x9d005480           0xb4         180   
+.text.IntToChar         0x9d005534           0xb0         176   
+.text.MOTOR_Initialize  0x9d0055e4           0xac         172   
+.text                   0x9d005690           0xa8         168  App's exec code 
+.text.xTaskCheckForTime 0x9d005738           0xa0         160   
+.text.write             0x9d0057d8           0x9c         156   
+.text.xTimerCreate      0x9d005874           0x98         152   
+.text                   0x9d00590c           0x98         152  App's exec code 
+.text.xQueueGenericCrea 0x9d0059a4           0x94         148   
+.text.vTaskPlaceOnEvent 0x9d005a38           0x94         148   
+.text.xTimerGenericComm 0x9d005acc           0x94         148   
+.text.SYS_Initialize    0x9d005b60           0x94         148   
+.text.vTaskDelay        0x9d005bf4           0x90         144   
+.text.vTaskStartSchedul 0x9d005c84           0x90         144   
+.text.COMMUNICATION_Ini 0x9d005d14           0x8c         140   
+.text.SENSORCOMMUNICATI 0x9d005da0           0x8c         140   
+.text.CharToInt         0x9d005e2c           0x7c         124   
+.text.DRV_TMR0_Initiali 0x9d005ea8           0x7c         124   
+.text.theTimerInit      0x9d005f24           0x78         120   
+.text.vQueueWaitForMess 0x9d005f9c           0x74         116   
+.text.prvInsertTimerInA 0x9d006010           0x74         116   
+.text.prvCheckForValidL 0x9d006084           0x74         116   
+.text.prvAddCurrentTask 0x9d0060f8           0x70         112   
+.text.vTaskPlaceOnEvent 0x9d006168           0x6c         108   
+.text.vApplicationSetup 0x9d0061d4           0x6c         108   
+.text.vTaskExitCritical 0x9d006240           0x68         104   
+.text._sprintf_cdnopuxX 0x9d0062a8           0x68         104   
+.text.xTimerCreateTimer 0x9d006310           0x60          96   
+.text.vListInsert       0x9d006370           0x5c          92   
+.text.xPortStartSchedul 0x9d0063cc           0x5c          92   
+.text.SYS_DEVCON_System 0x9d006428           0x58          88   
+.text.SYS_CLK_Initializ 0x9d006480           0x58          88   
+.text.main_entry        0x9d0064d8           0x54          84   
+.text.motor_sendmsg     0x9d00652c           0x54          84   
+.text.debugU            0x9d006580           0x54          84   
+.text.pxPortInitialiseS 0x9d0065d4           0x54          84   
+.text.vPortIncrementTic 0x9d006628           0x54          84   
+.text.motor_durationTic 0x9d00667c           0x50          80   
+.text.prvCopyDataFromQu 0x9d0066cc           0x50          80   
+.text.vTaskEnterCritica 0x9d00671c           0x50          80   
+.text.SYS_DEVCON_System 0x9d00676c           0x48          72   
+.rodata                 0x9d0067b4           0x48          72  Read-only const 
+.text._bootstrap_except 0x9d0067fc           0x48          72   
+.vector_default         0x9d006844           0x48          72   
+.text.uxListRemove      0x9d00688c           0x44          68   
+.text                   0x9d0068d0           0x44          68  App's exec code 
+.text.SYS_PORTS_Initial 0x9d006914           0x40          64   
+.text._general_exceptio 0x9d006954           0x40          64   
+.text.uxPortSetInterrup 0x9d006994           0x3c          60   
+.text.IntHandlerDrvTmrI 0x9d0069d0           0x3c          60   
+.text.communication_sen 0x9d006a0c           0x38          56   
+.text.sensorcommunicati 0x9d006a44           0x38          56   
+.text.debugUInt         0x9d006a7c           0x38          56   
+.text.prvResetNextTaskU 0x9d006ab4           0x38          56   
+.text.crash             0x9d006aec           0x34          52   
+.text.debugTimerInit    0x9d006b20           0x34          52   
+.text.sensor_debugTimer 0x9d006b54           0x34          52   
+.text.vListInsertEnd    0x9d006b88           0x30          48   
+.text.DRV_USART1_ReadBy 0x9d006bb8           0x30          48   
+.text.DRV_USART2_ReadBy 0x9d006be8           0x30          48   
+.text.prvTaskExitError  0x9d006c18           0x2c          44   
+.text.DRV_USART0_WriteB 0x9d006c44           0x2c          44   
+.text.DRV_USART1_WriteB 0x9d006c70           0x2c          44   
+.text.DRV_USART2_WriteB 0x9d006c9c           0x2c          44   
+.text.vApplicationStack 0x9d006cc8           0x2c          44   
+.text.vApplicationMallo 0x9d006cf4           0x2c          44   
+.text.communication_Int 0x9d006d20           0x28          40   
+.text.sensorcommunicati 0x9d006d48           0x28          40   
+.text.pvTaskIncrementMu 0x9d006d70           0x28          40   
+.text.IntHandlerDrvUsar 0x9d006d98           0x28          40   
+.rodata                 0x9d006dc0           0x48          72  Read-only const 
+.text.main              0x9d006e08           0x20          32   
+.text.vListInitialise   0x9d006e28           0x20          32   
+.text.xTaskGetScheduler 0x9d006e48           0x20          32   
+.text._SYS_Tasks        0x9d006e68           0x20          32   
+.text._COMMUNICATION_Ta 0x9d006e88           0x20          32   
+.text._MOTOR_Tasks      0x9d006ea8           0x20          32   
+.text._SENSORCOMMUNICAT 0x9d006ec8           0x20          32   
+.text.initDebugU        0x9d006ee8           0x1c          28   
+.text.theTimerCallback  0x9d006f04           0x1c          28   
+.text.SYS_DEVCON_JTAGDi 0x9d006f20           0x1c          28   
+.rodata                 0x9d006f3c           0x1c          28  Read-only const 
+.text.vPortClearInterru 0x9d006f58           0x1c          28   
+.text.SYS_INT_Initializ 0x9d006f74           0x18          24   
+.text.DRV_TMR0_Start    0x9d006f8c           0x18          24   
+.rodata                 0x9d006fa4           0x18          24  Read-only const 
+.text                   0x9d006fbc           0x18          24  App's exec code 
+.text.SYS_DEVCON_Initia 0x9d006fd4           0x14          20   
+.text.vTaskSuspendAll   0x9d006fe8           0x14          20   
+.text.vTaskSetTimeOutSt 0x9d006ffc           0x14          20   
+.text.DRV_USART1_Receiv 0x9d007010           0x14          20   
+.text.DRV_USART2_Receiv 0x9d007024           0x14          20   
+.rodata                 0x9d007038           0x10          16  Read-only const 
+.text.debugTimerTick    0x9d007048           0x10          16   
+.text.debugGetTime      0x9d007058           0x10          16   
+.text.sensor_debugTimer 0x9d007068           0x10          16   
+.text.sensor_debugGetTi 0x9d007078           0x10          16   
+.text.vTaskMissedYield  0x9d007088           0x10          16   
+.text.DRV_TMR0_CounterC 0x9d007098           0x10          16   
+.text.xQueueIsQueueEmpt 0x9d0070a8            0xc          12   
+.text.xTaskGetTickCount 0x9d0070b4            0xc          12   
+.text.SYS_CLK_SystemFre 0x9d0070c0            0xc          12   
+.text.SYS_CLK_Periphera 0x9d0070cc            0xc          12   
+.text.SYS_DEVCON_Tasks  0x9d0070d8            0x8           8   
+.text.vListInitialiseIt 0x9d0070e0            0x8           8   
+.rodata                 0x9d0070e8            0x8           8  Read-only const 
+.text.vPortFree         0x9d0070f0            0x8           8   
+.text._on_reset         0x9d0070f8            0x8           8   
+.text._on_bootstrap     0x9d007100            0x8           8   
+.rodata                 0x9d007108            0x4           4  Read-only const 
+      Total kseg0_program_mem used  :      0x710c       28940  5.5% of 0x80000
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -373,7 +385,7 @@ section                    address  length [bytes]      (dec)  Description
 .bev_excpt              0xbfc00380           0x10          16  BEV-Exception 
          Total kseg1_boot_mem used  :       0x204         516  44.2% of 0x490
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x73d8       29656  5.6% of 0x81e00
+         Total Program Memory used  :      0x74e0       29920  5.6% of 0x81e00
         --------------------------------------------------------------------------
 
 
@@ -381,22 +393,22 @@ kseg1 Data-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
 .sdata                  0xa0000000            0xc          12  Small init data 
-.sbss                   0xa000000c           0x6c         108  Small uninit data 
-.bss                    0xa0000078           0xcc         204  Uninitialized data 
-.bss                    0xa0000144         0x5708       22280  Uninitialized data 
-.data                   0xa000584c           0x4c          76  Initialized data 
-.bss                    0xa0005898           0x6c         108  Uninitialized data 
-         Total kseg1_data_mem used  :      0x5904       22788  17.4% of 0x20000
+.sbss                   0xa000000c           0x7c         124  Small uninit data 
+.bss                    0xa0000088           0xcc         204  Uninitialized data 
+.bss                    0xa0000154         0x5708       22280  Uninitialized data 
+.data                   0xa000585c           0x4c          76  Initialized data 
+.bss                    0xa00058a8           0x6c         108  Uninitialized data 
+         Total kseg1_data_mem used  :      0x5914       22804  17.4% of 0x20000
         --------------------------------------------------------------------------
-            Total Data Memory used  :      0x5904       22788  17.4% of 0x20000
+            Total Data Memory used  :      0x5914       22804  17.4% of 0x20000
         --------------------------------------------------------------------------
 
 
 Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-heap                    0xa0005908              0           0  Reserved for heap 
-stack                   0xa0005920        0x1a6d0      108240  Reserved for stack 
+heap                    0xa0005918              0           0  Reserved for heap 
+stack                   0xa0005930        0x1a6c0      108224  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -709,27 +721,11 @@ Discarded input sections
  .data          0x00000000        0x0 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .bss           0x00000000        0x0 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .reginfo       0x00000000       0x18 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR0_Start
-                0x00000000       0x18 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .text.DRV_TMR0_Stop
                 0x00000000       0x18 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR0_CounterClear
-                0x00000000       0x10 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .text.DRV_TMR0_CounterValueSet
                 0x00000000       0x14 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .text.DRV_TMR0_CounterValueGet
-                0x00000000       0x10 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR1_Initialize
-                0x00000000       0x7c build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR1_Start
-                0x00000000       0x18 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR1_Stop
-                0x00000000       0x18 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR1_CounterClear
-                0x00000000       0x10 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR1_CounterValueSet
-                0x00000000       0x14 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .text.DRV_TMR1_CounterValueGet
                 0x00000000       0x10 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .text          0x00000000        0x0 build/configRover/production/_ext/1532176561/drv_usart_static.o
  .data          0x00000000        0x0 build/configRover/production/_ext/1532176561/drv_usart_static.o
@@ -1657,7 +1653,7 @@ END GROUP
                 0xa000000c                _data_end = .
                 0xa000000c                _bss_begin = .
 
-.sbss           0xa000000c       0x6c
+.sbss           0xa000000c       0x7c
                 0xa000000c                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
@@ -1669,27 +1665,32 @@ END GROUP
                 0xa0000058                uxSavedTaskStackPointer
  .sbss          0xa000005c        0xc build/configRover/production/_ext/369138285/system_exceptions.o
  *(.scommon)
- .scommon       0xa0000068        0x8 build/configRover/production/_ext/1044950436/sys_devcon.o
-                0xa0000068                sysDevconObj
- .scommon       0xa0000070        0x8 build/configRover/production/_ext/369138285/system_init.o
-                0xa0000070                sysObj
-                0xa0000078                _sbss_end = .
-                0xa0000078                . = ALIGN (0x4)
+ .scommon       0xa0000068       0x10 build/configRover/production/_ext/1536116519/debug.o
+                0xa0000068                lastTime
+                0xa000006c                sensor_msTime
+                0xa0000070                sensor_lastTime
+                0xa0000074                msTime
+ .scommon       0xa0000078        0x8 build/configRover/production/_ext/1044950436/sys_devcon.o
+                0xa0000078                sysDevconObj
+ .scommon       0xa0000080        0x8 build/configRover/production/_ext/369138285/system_init.o
+                0xa0000080                sysObj
+                0xa0000088                _sbss_end = .
+                0xa0000088                . = ALIGN (0x4)
 
-.bss            0xa0000078       0xcc
+.bss            0xa0000088       0xcc
  *(.dynbss)
  *(COMMON)
- COMMON         0xa0000078       0x5c build/configRover/production/_ext/1360937237/communication.o
-                0xa0000078                testData
-                0xa0000090                communicationData
- COMMON         0xa00000d4       0x48 build/configRover/production/_ext/1360937237/sensorCommunication.o
-                0xa00000d4                sensorcommunicationData
- COMMON         0xa000011c       0x28 build/configRover/production/_ext/1360937237/motor.o
-                0xa000011c                motorData
-                0xa0000144                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0xa0000144                . = ALIGN (0x4)
-                0xa0000144                _end = .
-                0xa0000144                _bss_end = .
+ COMMON         0xa0000088       0x5c build/configRover/production/_ext/1360937237/communication.o
+                0xa0000088                testData
+                0xa00000a0                communicationData
+ COMMON         0xa00000e4       0x48 build/configRover/production/_ext/1360937237/sensorCommunication.o
+                0xa00000e4                sensorcommunicationData
+ COMMON         0xa000012c       0x28 build/configRover/production/_ext/1360937237/motor.o
+                0xa000012c                motorData
+                0xa0000154                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0xa0000154                . = ALIGN (0x4)
+                0xa0000154                _end = .
+                0xa0000154                _bss_end = .
                 0x00020000                _bmxdudba_address = 0x20000
                 0x00020000                _bmxdupba_address = 0x20000
 
@@ -1710,51 +1711,51 @@ END GROUP
  *(.gptab.bss)
  *(.gptab.sbss)
 
-.mdebug.abi32   0xa0000144        0x0
+.mdebug.abi32   0xa0000154        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1360937237/communication.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1360937237/main.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1360937237/sensorCommunication.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1360937237/motor.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1536116519/debug.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1360937237/timer.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/2006758146/osal_freertos.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1044950436/sys_devcon.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/443798654/sys_int_pic32.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/885213861/sys_ports.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1209819165/croutine.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1209819165/list.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1209819165/queue.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1209819165/tasks.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1209819165/timers.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1209819165/event_groups.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1343652704/heap_1.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/432427763/port.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1532176561/drv_usart_static.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/249367850/sys_clk_static.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/1926720346/sys_ports_static.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/369138285/system_init.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/369138285/system_interrupt.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/369138285/system_exceptions.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/369138285/system_tasks.o
- .mdebug.abi32  0xa0000144        0x0 build/configRover/production/_ext/369138285/rtos_hooks.o
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(xc32_uart.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
- .mdebug.abi32  0xa0000144        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1360937237/communication.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1360937237/main.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1360937237/sensorCommunication.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1360937237/motor.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1536116519/debug.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1360937237/timer.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/2006758146/osal_freertos.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1044950436/sys_devcon.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/885213861/sys_ports.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1209819165/croutine.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1209819165/list.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1209819165/queue.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1209819165/tasks.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1209819165/timers.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1209819165/event_groups.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1343652704/heap_1.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/432427763/port.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1532176561/drv_usart_static.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/249367850/sys_clk_static.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/1926720346/sys_ports_static.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/369138285/system_init.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/369138285/system_interrupt.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/369138285/system_exceptions.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/369138285/system_tasks.o
+ .mdebug.abi32  0xa0000154        0x0 build/configRover/production/_ext/369138285/rtos_hooks.o
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(xc32_uart.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+ .mdebug.abi32  0xa0000154        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
 
 .mdebug.abiN32
  *(.mdebug.abiN32)
@@ -1870,39 +1871,39 @@ END GROUP
  .debug_aranges
                 0x000000e8       0x40 build/configRover/production/_ext/1360937237/motor.o
  .debug_aranges
-                0x00000128       0x50 build/configRover/production/_ext/1536116519/debug.o
+                0x00000128       0x80 build/configRover/production/_ext/1536116519/debug.o
  .debug_aranges
-                0x00000178       0x28 build/configRover/production/_ext/1360937237/timer.o
+                0x000001a8       0x28 build/configRover/production/_ext/1360937237/timer.o
  .debug_aranges
-                0x000001a0       0x88 build/configRover/production/_ext/2006758146/osal_freertos.o
+                0x000001d0       0x88 build/configRover/production/_ext/2006758146/osal_freertos.o
  .debug_aranges
-                0x00000228       0x78 build/configRover/production/_ext/1044950436/sys_devcon.o
+                0x00000258       0x78 build/configRover/production/_ext/1044950436/sys_devcon.o
  .debug_aranges
-                0x000002a0       0x20 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+                0x000002d0       0x20 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
  .debug_aranges
-                0x000002c0       0x48 build/configRover/production/_ext/443798654/sys_int_pic32.o
+                0x000002f0       0x48 build/configRover/production/_ext/443798654/sys_int_pic32.o
  .debug_aranges
-                0x00000308       0xf8 build/configRover/production/_ext/885213861/sys_ports.o
+                0x00000338       0xf8 build/configRover/production/_ext/885213861/sys_ports.o
  .debug_aranges
-                0x00000400       0x18 build/configRover/production/_ext/1209819165/croutine.o
+                0x00000430       0x18 build/configRover/production/_ext/1209819165/croutine.o
  .debug_aranges
-                0x00000418       0x40 build/configRover/production/_ext/1209819165/list.o
+                0x00000448       0x40 build/configRover/production/_ext/1209819165/list.o
  .debug_aranges
-                0x00000458       0xb8 build/configRover/production/_ext/1209819165/queue.o
+                0x00000488       0xb8 build/configRover/production/_ext/1209819165/queue.o
  .debug_aranges
-                0x00000510      0x178 build/configRover/production/_ext/1209819165/tasks.o
+                0x00000540      0x178 build/configRover/production/_ext/1209819165/tasks.o
  .debug_aranges
-                0x00000688       0x70 build/configRover/production/_ext/1209819165/timers.o
+                0x000006b8       0x70 build/configRover/production/_ext/1209819165/timers.o
  .debug_aranges
-                0x000006f8       0x60 build/configRover/production/_ext/1209819165/event_groups.o
+                0x00000728       0x60 build/configRover/production/_ext/1209819165/event_groups.o
  .debug_aranges
-                0x00000758       0x38 build/configRover/production/_ext/1343652704/heap_1.o
+                0x00000788       0x38 build/configRover/production/_ext/1343652704/heap_1.o
  .debug_aranges
-                0x00000790       0x58 build/configRover/production/_ext/432427763/port.o
+                0x000007c0       0x58 build/configRover/production/_ext/432427763/port.o
  .debug_aranges
-                0x000007e8       0x20 build/configRover/production/_ext/432427763/port_asm.o
+                0x00000818       0x20 build/configRover/production/_ext/432427763/port_asm.o
  .debug_aranges
-                0x00000808       0x78 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+                0x00000838       0x48 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .debug_aranges
                 0x00000880       0x68 build/configRover/production/_ext/1532176561/drv_usart_static.o
  .debug_aranges
@@ -1949,259 +1950,259 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x23cb6
+.debug_info     0x00000000    0x23ca6
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x23ff build/configRover/production/_ext/1360937237/communication.o
- .debug_info    0x000023ff      0x1c1 build/configRover/production/_ext/1360937237/main.o
- .debug_info    0x000025c0     0x2063 build/configRover/production/_ext/1360937237/sensorCommunication.o
- .debug_info    0x00004623     0x1711 build/configRover/production/_ext/1360937237/motor.o
- .debug_info    0x00005d34      0xd08 build/configRover/production/_ext/1536116519/debug.o
- .debug_info    0x00006a3c      0x9c9 build/configRover/production/_ext/1360937237/timer.o
- .debug_info    0x00007405      0xabd build/configRover/production/_ext/2006758146/osal_freertos.o
- .debug_info    0x00007ec2     0x10ab build/configRover/production/_ext/1044950436/sys_devcon.o
- .debug_info    0x00008f6d      0xd82 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .debug_info    0x00009cef     0x15e9 build/configRover/production/_ext/443798654/sys_int_pic32.o
- .debug_info    0x0000b2d8     0x326c build/configRover/production/_ext/885213861/sys_ports.o
- .debug_info    0x0000e544      0x19e build/configRover/production/_ext/1209819165/croutine.o
- .debug_info    0x0000e6e2      0x4a2 build/configRover/production/_ext/1209819165/list.o
- .debug_info    0x0000eb84     0x1853 build/configRover/production/_ext/1209819165/queue.o
- .debug_info    0x000103d7     0x29db build/configRover/production/_ext/1209819165/tasks.o
- .debug_info    0x00012db2     0x1526 build/configRover/production/_ext/1209819165/timers.o
- .debug_info    0x000142d8      0xd70 build/configRover/production/_ext/1209819165/event_groups.o
- .debug_info    0x00015048      0x3a2 build/configRover/production/_ext/1343652704/heap_1.o
- .debug_info    0x000153ea     0x11cd build/configRover/production/_ext/432427763/port.o
- .debug_info    0x000165b7       0xec build/configRover/production/_ext/432427763/port_asm.o
- .debug_info    0x000166a3     0x2567 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .debug_info    0x00018c0a     0x3c7e build/configRover/production/_ext/1532176561/drv_usart_static.o
- .debug_info    0x0001c888     0x10d2 build/configRover/production/_ext/249367850/sys_clk_static.o
- .debug_info    0x0001d95a      0xcd9 build/configRover/production/_ext/1926720346/sys_ports_static.o
- .debug_info    0x0001e633      0xda9 build/configRover/production/_ext/369138285/system_init.o
- .debug_info    0x0001f3dc     0x1b30 build/configRover/production/_ext/369138285/system_interrupt.o
- .debug_info    0x00020f0c      0x7d8 build/configRover/production/_ext/369138285/system_exceptions.o
- .debug_info    0x000216e4      0xc43 build/configRover/production/_ext/369138285/system_tasks.o
- .debug_info    0x00022327       0xb7 build/configRover/production/_ext/369138285/system_interrupt_a.o
- .debug_info    0x000223de      0x26d build/configRover/production/_ext/369138285/rtos_hooks.o
- .debug_info    0x0002264b       0xe3 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_info    0x0002272e       0xbd /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_info    0x000227eb       0xc5 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_info    0x000228b0       0xd7 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
- .debug_info    0x00022987       0xc2 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
- .debug_info    0x00022a49       0xc3 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
- .debug_info    0x00022b0c       0xb4 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
- .debug_info    0x00022bc0       0xb7 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
- .debug_info    0x00022c77       0xae /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
- .debug_info    0x00022d25       0xb6 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
- .debug_info    0x00022ddb      0x74f /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
- .debug_info    0x0002352a      0x78c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+ .debug_info    0x00000000     0x2451 build/configRover/production/_ext/1360937237/communication.o
+ .debug_info    0x00002451      0x1c1 build/configRover/production/_ext/1360937237/main.o
+ .debug_info    0x00002612     0x20a8 build/configRover/production/_ext/1360937237/sensorCommunication.o
+ .debug_info    0x000046ba     0x1711 build/configRover/production/_ext/1360937237/motor.o
+ .debug_info    0x00005dcb      0xeca build/configRover/production/_ext/1536116519/debug.o
+ .debug_info    0x00006c95      0x9c9 build/configRover/production/_ext/1360937237/timer.o
+ .debug_info    0x0000765e      0xabd build/configRover/production/_ext/2006758146/osal_freertos.o
+ .debug_info    0x0000811b     0x10ab build/configRover/production/_ext/1044950436/sys_devcon.o
+ .debug_info    0x000091c6      0xd82 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .debug_info    0x00009f48     0x15e9 build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .debug_info    0x0000b531     0x326c build/configRover/production/_ext/885213861/sys_ports.o
+ .debug_info    0x0000e79d      0x19e build/configRover/production/_ext/1209819165/croutine.o
+ .debug_info    0x0000e93b      0x4a2 build/configRover/production/_ext/1209819165/list.o
+ .debug_info    0x0000eddd     0x1853 build/configRover/production/_ext/1209819165/queue.o
+ .debug_info    0x00010630     0x29db build/configRover/production/_ext/1209819165/tasks.o
+ .debug_info    0x0001300b     0x1526 build/configRover/production/_ext/1209819165/timers.o
+ .debug_info    0x00014531      0xd70 build/configRover/production/_ext/1209819165/event_groups.o
+ .debug_info    0x000152a1      0x3a2 build/configRover/production/_ext/1343652704/heap_1.o
+ .debug_info    0x00015643     0x11cd build/configRover/production/_ext/432427763/port.o
+ .debug_info    0x00016810       0xec build/configRover/production/_ext/432427763/port_asm.o
+ .debug_info    0x000168fc     0x2158 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .debug_info    0x00018a54     0x3c7e build/configRover/production/_ext/1532176561/drv_usart_static.o
+ .debug_info    0x0001c6d2     0x10d2 build/configRover/production/_ext/249367850/sys_clk_static.o
+ .debug_info    0x0001d7a4      0xcd9 build/configRover/production/_ext/1926720346/sys_ports_static.o
+ .debug_info    0x0001e47d      0xda9 build/configRover/production/_ext/369138285/system_init.o
+ .debug_info    0x0001f226     0x1cd6 build/configRover/production/_ext/369138285/system_interrupt.o
+ .debug_info    0x00020efc      0x7d8 build/configRover/production/_ext/369138285/system_exceptions.o
+ .debug_info    0x000216d4      0xc43 build/configRover/production/_ext/369138285/system_tasks.o
+ .debug_info    0x00022317       0xb7 build/configRover/production/_ext/369138285/system_interrupt_a.o
+ .debug_info    0x000223ce      0x26d build/configRover/production/_ext/369138285/rtos_hooks.o
+ .debug_info    0x0002263b       0xe3 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_info    0x0002271e       0xbd /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_info    0x000227db       0xc5 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x000228a0       0xd7 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_info    0x00022977       0xc2 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
+ .debug_info    0x00022a39       0xc3 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
+ .debug_info    0x00022afc       0xb4 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
+ .debug_info    0x00022bb0       0xb7 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
+ .debug_info    0x00022c67       0xae /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
+ .debug_info    0x00022d15       0xb6 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
+ .debug_info    0x00022dcb      0x74f /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+ .debug_info    0x0002351a      0x78c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
 
-.debug_abbrev   0x00000000     0x38c7
+.debug_abbrev   0x00000000     0x3906
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x30e build/configRover/production/_ext/1360937237/communication.o
- .debug_abbrev  0x0000030e       0x93 build/configRover/production/_ext/1360937237/main.o
- .debug_abbrev  0x000003a1      0x2bf build/configRover/production/_ext/1360937237/sensorCommunication.o
- .debug_abbrev  0x00000660      0x27a build/configRover/production/_ext/1360937237/motor.o
- .debug_abbrev  0x000008da      0x20e build/configRover/production/_ext/1536116519/debug.o
- .debug_abbrev  0x00000ae8      0x13f build/configRover/production/_ext/1360937237/timer.o
- .debug_abbrev  0x00000c27      0x1fe build/configRover/production/_ext/2006758146/osal_freertos.o
- .debug_abbrev  0x00000e25      0x26d build/configRover/production/_ext/1044950436/sys_devcon.o
- .debug_abbrev  0x00001092      0x16d build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .debug_abbrev  0x000011ff      0x1d0 build/configRover/production/_ext/443798654/sys_int_pic32.o
- .debug_abbrev  0x000013cf      0x219 build/configRover/production/_ext/885213861/sys_ports.o
- .debug_abbrev  0x000015e8       0x1b build/configRover/production/_ext/1209819165/croutine.o
- .debug_abbrev  0x00001603       0xf1 build/configRover/production/_ext/1209819165/list.o
- .debug_abbrev  0x000016f4      0x2c4 build/configRover/production/_ext/1209819165/queue.o
- .debug_abbrev  0x000019b8      0x383 build/configRover/production/_ext/1209819165/tasks.o
- .debug_abbrev  0x00001d3b      0x337 build/configRover/production/_ext/1209819165/timers.o
- .debug_abbrev  0x00002072      0x29a build/configRover/production/_ext/1209819165/event_groups.o
- .debug_abbrev  0x0000230c      0x13f build/configRover/production/_ext/1343652704/heap_1.o
- .debug_abbrev  0x0000244b      0x2cf build/configRover/production/_ext/432427763/port.o
- .debug_abbrev  0x0000271a       0x14 build/configRover/production/_ext/432427763/port_asm.o
- .debug_abbrev  0x0000272e      0x1bc build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .debug_abbrev  0x000028ea      0x218 build/configRover/production/_ext/1532176561/drv_usart_static.o
- .debug_abbrev  0x00002b02      0x209 build/configRover/production/_ext/249367850/sys_clk_static.o
- .debug_abbrev  0x00002d0b      0x12f build/configRover/production/_ext/1926720346/sys_ports_static.o
- .debug_abbrev  0x00002e3a      0x201 build/configRover/production/_ext/369138285/system_init.o
- .debug_abbrev  0x0000303b      0x1f4 build/configRover/production/_ext/369138285/system_interrupt.o
- .debug_abbrev  0x0000322f       0x8c build/configRover/production/_ext/369138285/system_exceptions.o
- .debug_abbrev  0x000032bb      0x154 build/configRover/production/_ext/369138285/system_tasks.o
- .debug_abbrev  0x0000340f       0x12 build/configRover/production/_ext/369138285/system_interrupt_a.o
- .debug_abbrev  0x00003421       0x97 build/configRover/production/_ext/369138285/rtos_hooks.o
- .debug_abbrev  0x000034b8       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_abbrev  0x000034e0       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_abbrev  0x00003508       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_abbrev  0x00003530       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
- .debug_abbrev  0x00003558       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
- .debug_abbrev  0x00003580       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
- .debug_abbrev  0x000035a8       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
- .debug_abbrev  0x000035d0       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
- .debug_abbrev  0x000035f8       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
- .debug_abbrev  0x00003620       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
- .debug_abbrev  0x00003648      0x138 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
- .debug_abbrev  0x00003780      0x147 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+ .debug_abbrev  0x00000000      0x2fb build/configRover/production/_ext/1360937237/communication.o
+ .debug_abbrev  0x000002fb       0x93 build/configRover/production/_ext/1360937237/main.o
+ .debug_abbrev  0x0000038e      0x2c3 build/configRover/production/_ext/1360937237/sensorCommunication.o
+ .debug_abbrev  0x00000651      0x27a build/configRover/production/_ext/1360937237/motor.o
+ .debug_abbrev  0x000008cb      0x24f build/configRover/production/_ext/1536116519/debug.o
+ .debug_abbrev  0x00000b1a      0x13f build/configRover/production/_ext/1360937237/timer.o
+ .debug_abbrev  0x00000c59      0x1fe build/configRover/production/_ext/2006758146/osal_freertos.o
+ .debug_abbrev  0x00000e57      0x26d build/configRover/production/_ext/1044950436/sys_devcon.o
+ .debug_abbrev  0x000010c4      0x16d build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .debug_abbrev  0x00001231      0x1d0 build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .debug_abbrev  0x00001401      0x219 build/configRover/production/_ext/885213861/sys_ports.o
+ .debug_abbrev  0x0000161a       0x1b build/configRover/production/_ext/1209819165/croutine.o
+ .debug_abbrev  0x00001635       0xf1 build/configRover/production/_ext/1209819165/list.o
+ .debug_abbrev  0x00001726      0x2c4 build/configRover/production/_ext/1209819165/queue.o
+ .debug_abbrev  0x000019ea      0x383 build/configRover/production/_ext/1209819165/tasks.o
+ .debug_abbrev  0x00001d6d      0x337 build/configRover/production/_ext/1209819165/timers.o
+ .debug_abbrev  0x000020a4      0x29a build/configRover/production/_ext/1209819165/event_groups.o
+ .debug_abbrev  0x0000233e      0x13f build/configRover/production/_ext/1343652704/heap_1.o
+ .debug_abbrev  0x0000247d      0x2cf build/configRover/production/_ext/432427763/port.o
+ .debug_abbrev  0x0000274c       0x14 build/configRover/production/_ext/432427763/port_asm.o
+ .debug_abbrev  0x00002760      0x1bc build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .debug_abbrev  0x0000291c      0x218 build/configRover/production/_ext/1532176561/drv_usart_static.o
+ .debug_abbrev  0x00002b34      0x209 build/configRover/production/_ext/249367850/sys_clk_static.o
+ .debug_abbrev  0x00002d3d      0x12f build/configRover/production/_ext/1926720346/sys_ports_static.o
+ .debug_abbrev  0x00002e6c      0x201 build/configRover/production/_ext/369138285/system_init.o
+ .debug_abbrev  0x0000306d      0x201 build/configRover/production/_ext/369138285/system_interrupt.o
+ .debug_abbrev  0x0000326e       0x8c build/configRover/production/_ext/369138285/system_exceptions.o
+ .debug_abbrev  0x000032fa      0x154 build/configRover/production/_ext/369138285/system_tasks.o
+ .debug_abbrev  0x0000344e       0x12 build/configRover/production/_ext/369138285/system_interrupt_a.o
+ .debug_abbrev  0x00003460       0x97 build/configRover/production/_ext/369138285/rtos_hooks.o
+ .debug_abbrev  0x000034f7       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_abbrev  0x0000351f       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_abbrev  0x00003547       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_abbrev  0x0000356f       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_abbrev  0x00003597       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
+ .debug_abbrev  0x000035bf       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
+ .debug_abbrev  0x000035e7       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
+ .debug_abbrev  0x0000360f       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
+ .debug_abbrev  0x00003637       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
+ .debug_abbrev  0x0000365f       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
+ .debug_abbrev  0x00003687      0x138 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x000037bf      0x147 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
 
-.debug_line     0x00000000     0x7a8e
+.debug_line     0x00000000     0x7bab
  *(.debug_line)
- .debug_line    0x00000000      0x682 build/configRover/production/_ext/1360937237/communication.o
- .debug_line    0x00000682       0xd8 build/configRover/production/_ext/1360937237/main.o
- .debug_line    0x0000075a      0x582 build/configRover/production/_ext/1360937237/sensorCommunication.o
- .debug_line    0x00000cdc      0x4b7 build/configRover/production/_ext/1360937237/motor.o
- .debug_line    0x00001193      0x416 build/configRover/production/_ext/1536116519/debug.o
- .debug_line    0x000015a9      0x221 build/configRover/production/_ext/1360937237/timer.o
- .debug_line    0x000017ca      0x2ee build/configRover/production/_ext/2006758146/osal_freertos.o
- .debug_line    0x00001ab8      0x690 build/configRover/production/_ext/1044950436/sys_devcon.o
- .debug_line    0x00002148      0x527 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .debug_line    0x0000266f      0x3f2 build/configRover/production/_ext/443798654/sys_int_pic32.o
- .debug_line    0x00002a61      0x912 build/configRover/production/_ext/885213861/sys_ports.o
- .debug_line    0x00003373       0x1d build/configRover/production/_ext/1209819165/croutine.o
- .debug_line    0x00003390      0x20f build/configRover/production/_ext/1209819165/list.o
- .debug_line    0x0000359f      0x4cc build/configRover/production/_ext/1209819165/queue.o
- .debug_line    0x00003a6b      0x820 build/configRover/production/_ext/1209819165/tasks.o
- .debug_line    0x0000428b      0x3b7 build/configRover/production/_ext/1209819165/timers.o
- .debug_line    0x00004642      0x34b build/configRover/production/_ext/1209819165/event_groups.o
- .debug_line    0x0000498d      0x240 build/configRover/production/_ext/1343652704/heap_1.o
- .debug_line    0x00004bcd      0x250 build/configRover/production/_ext/432427763/port.o
- .debug_line    0x00004e1d      0x11a build/configRover/production/_ext/432427763/port_asm.o
- .debug_line    0x00004f37      0x56a build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .debug_line    0x000054a1      0x7cf build/configRover/production/_ext/1532176561/drv_usart_static.o
- .debug_line    0x00005c70      0x3ee build/configRover/production/_ext/249367850/sys_clk_static.o
- .debug_line    0x0000605e      0x30f build/configRover/production/_ext/1926720346/sys_ports_static.o
- .debug_line    0x0000636d      0x503 build/configRover/production/_ext/369138285/system_init.o
- .debug_line    0x00006870      0x43d build/configRover/production/_ext/369138285/system_interrupt.o
- .debug_line    0x00006cad       0xf4 build/configRover/production/_ext/369138285/system_exceptions.o
- .debug_line    0x00006da1      0x3b7 build/configRover/production/_ext/369138285/system_tasks.o
- .debug_line    0x00007158       0xfd build/configRover/production/_ext/369138285/system_interrupt_a.o
- .debug_line    0x00007255      0x15e build/configRover/production/_ext/369138285/rtos_hooks.o
- .debug_line    0x000073b3       0x97 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_line    0x0000744a       0x84 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_line    0x000074ce       0x88 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_line    0x00007556       0x96 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
- .debug_line    0x000075ec       0x71 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
- .debug_line    0x0000765d       0x70 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
- .debug_line    0x000076cd       0x6f /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
- .debug_line    0x0000773c        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
- .debug_line    0x0000773c        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
- .debug_line    0x0000773c       0x70 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
- .debug_line    0x000077ac       0x79 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
- .debug_line    0x00007825       0x7d /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
- .debug_line    0x000078a2        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(xc32_uart.o)
- .debug_line    0x000078a2       0xed /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
- .debug_line    0x0000798f       0xff /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+ .debug_line    0x00000000      0x681 build/configRover/production/_ext/1360937237/communication.o
+ .debug_line    0x00000681       0xd8 build/configRover/production/_ext/1360937237/main.o
+ .debug_line    0x00000759      0x560 build/configRover/production/_ext/1360937237/sensorCommunication.o
+ .debug_line    0x00000cb9      0x4b7 build/configRover/production/_ext/1360937237/motor.o
+ .debug_line    0x00001170      0x512 build/configRover/production/_ext/1536116519/debug.o
+ .debug_line    0x00001682      0x221 build/configRover/production/_ext/1360937237/timer.o
+ .debug_line    0x000018a3      0x2ee build/configRover/production/_ext/2006758146/osal_freertos.o
+ .debug_line    0x00001b91      0x690 build/configRover/production/_ext/1044950436/sys_devcon.o
+ .debug_line    0x00002221      0x527 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .debug_line    0x00002748      0x3f2 build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .debug_line    0x00002b3a      0x912 build/configRover/production/_ext/885213861/sys_ports.o
+ .debug_line    0x0000344c       0x1d build/configRover/production/_ext/1209819165/croutine.o
+ .debug_line    0x00003469      0x20f build/configRover/production/_ext/1209819165/list.o
+ .debug_line    0x00003678      0x4cc build/configRover/production/_ext/1209819165/queue.o
+ .debug_line    0x00003b44      0x820 build/configRover/production/_ext/1209819165/tasks.o
+ .debug_line    0x00004364      0x3b7 build/configRover/production/_ext/1209819165/timers.o
+ .debug_line    0x0000471b      0x34b build/configRover/production/_ext/1209819165/event_groups.o
+ .debug_line    0x00004a66      0x240 build/configRover/production/_ext/1343652704/heap_1.o
+ .debug_line    0x00004ca6      0x250 build/configRover/production/_ext/432427763/port.o
+ .debug_line    0x00004ef6      0x11a build/configRover/production/_ext/432427763/port_asm.o
+ .debug_line    0x00005010      0x4c6 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .debug_line    0x000054d6      0x7cf build/configRover/production/_ext/1532176561/drv_usart_static.o
+ .debug_line    0x00005ca5      0x3ee build/configRover/production/_ext/249367850/sys_clk_static.o
+ .debug_line    0x00006093      0x30f build/configRover/production/_ext/1926720346/sys_ports_static.o
+ .debug_line    0x000063a2      0x503 build/configRover/production/_ext/369138285/system_init.o
+ .debug_line    0x000068a5      0x525 build/configRover/production/_ext/369138285/system_interrupt.o
+ .debug_line    0x00006dca       0xf4 build/configRover/production/_ext/369138285/system_exceptions.o
+ .debug_line    0x00006ebe      0x3b7 build/configRover/production/_ext/369138285/system_tasks.o
+ .debug_line    0x00007275       0xfd build/configRover/production/_ext/369138285/system_interrupt_a.o
+ .debug_line    0x00007372      0x15e build/configRover/production/_ext/369138285/rtos_hooks.o
+ .debug_line    0x000074d0       0x97 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_line    0x00007567       0x84 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_line    0x000075eb       0x88 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x00007673       0x96 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_line    0x00007709       0x71 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
+ .debug_line    0x0000777a       0x70 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
+ .debug_line    0x000077ea       0x6f /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
+ .debug_line    0x00007859        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
+ .debug_line    0x00007859        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
+ .debug_line    0x00007859       0x70 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
+ .debug_line    0x000078c9       0x79 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
+ .debug_line    0x00007942       0x7d /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
+ .debug_line    0x000079bf        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(xc32_uart.o)
+ .debug_line    0x000079bf       0xed /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+ .debug_line    0x00007aac       0xff /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
 
-.debug_frame    0x00000000     0x183c
+.debug_frame    0x00000000     0x1854
  *(.debug_frame)
  .debug_frame   0x00000000      0x144 build/configRover/production/_ext/1360937237/communication.o
  .debug_frame   0x00000144       0x28 build/configRover/production/_ext/1360937237/main.o
  .debug_frame   0x0000016c       0xe0 build/configRover/production/_ext/1360937237/sensorCommunication.o
  .debug_frame   0x0000024c       0xa0 build/configRover/production/_ext/1360937237/motor.o
- .debug_frame   0x000002ec       0xac build/configRover/production/_ext/1536116519/debug.o
- .debug_frame   0x00000398       0x40 build/configRover/production/_ext/1360937237/timer.o
- .debug_frame   0x000003d8      0x150 build/configRover/production/_ext/2006758146/osal_freertos.o
- .debug_frame   0x00000528       0xe8 build/configRover/production/_ext/1044950436/sys_devcon.o
- .debug_frame   0x00000610       0x28 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .debug_frame   0x00000638       0x90 build/configRover/production/_ext/443798654/sys_int_pic32.o
- .debug_frame   0x000006c8      0x1d0 build/configRover/production/_ext/885213861/sys_ports.o
- .debug_frame   0x00000898       0x60 build/configRover/production/_ext/1209819165/list.o
- .debug_frame   0x000008f8      0x230 build/configRover/production/_ext/1209819165/queue.o
- .debug_frame   0x00000b28      0x450 build/configRover/production/_ext/1209819165/tasks.o
- .debug_frame   0x00000f78      0x134 build/configRover/production/_ext/1209819165/timers.o
- .debug_frame   0x000010ac      0x108 build/configRover/production/_ext/1209819165/event_groups.o
- .debug_frame   0x000011b4       0x5c build/configRover/production/_ext/1343652704/heap_1.o
- .debug_frame   0x00001210       0xc0 build/configRover/production/_ext/432427763/port.o
- .debug_frame   0x000012d0       0xd0 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .debug_frame   0x000013a0       0xc8 build/configRover/production/_ext/1532176561/drv_usart_static.o
- .debug_frame   0x00001468       0x58 build/configRover/production/_ext/249367850/sys_clk_static.o
- .debug_frame   0x000014c0       0x20 build/configRover/production/_ext/1926720346/sys_ports_static.o
- .debug_frame   0x000014e0       0x28 build/configRover/production/_ext/369138285/system_init.o
- .debug_frame   0x00001508       0x64 build/configRover/production/_ext/369138285/system_interrupt.o
- .debug_frame   0x0000156c       0x28 build/configRover/production/_ext/369138285/system_exceptions.o
- .debug_frame   0x00001594       0x88 build/configRover/production/_ext/369138285/system_tasks.o
- .debug_frame   0x0000161c       0x40 build/configRover/production/_ext/369138285/rtos_hooks.o
- .debug_frame   0x0000165c       0x2c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_frame   0x00001688       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_frame   0x000016a8       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_frame   0x000016c8       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
- .debug_frame   0x000016e8       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
- .debug_frame   0x00001710       0x38 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
- .debug_frame   0x00001748       0x2c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
- .debug_frame   0x00001774       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
- .debug_frame   0x0000179c       0x38 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
- .debug_frame   0x000017d4       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
- .debug_frame   0x000017fc       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
- .debug_frame   0x0000181c       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+ .debug_frame   0x000002ec      0x11c build/configRover/production/_ext/1536116519/debug.o
+ .debug_frame   0x00000408       0x40 build/configRover/production/_ext/1360937237/timer.o
+ .debug_frame   0x00000448      0x150 build/configRover/production/_ext/2006758146/osal_freertos.o
+ .debug_frame   0x00000598       0xe8 build/configRover/production/_ext/1044950436/sys_devcon.o
+ .debug_frame   0x00000680       0x28 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .debug_frame   0x000006a8       0x90 build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .debug_frame   0x00000738      0x1d0 build/configRover/production/_ext/885213861/sys_ports.o
+ .debug_frame   0x00000908       0x60 build/configRover/production/_ext/1209819165/list.o
+ .debug_frame   0x00000968      0x230 build/configRover/production/_ext/1209819165/queue.o
+ .debug_frame   0x00000b98      0x450 build/configRover/production/_ext/1209819165/tasks.o
+ .debug_frame   0x00000fe8      0x134 build/configRover/production/_ext/1209819165/timers.o
+ .debug_frame   0x0000111c      0x108 build/configRover/production/_ext/1209819165/event_groups.o
+ .debug_frame   0x00001224       0x5c build/configRover/production/_ext/1343652704/heap_1.o
+ .debug_frame   0x00001280       0xc0 build/configRover/production/_ext/432427763/port.o
+ .debug_frame   0x00001340       0x70 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .debug_frame   0x000013b0       0xc8 build/configRover/production/_ext/1532176561/drv_usart_static.o
+ .debug_frame   0x00001478       0x58 build/configRover/production/_ext/249367850/sys_clk_static.o
+ .debug_frame   0x000014d0       0x20 build/configRover/production/_ext/1926720346/sys_ports_static.o
+ .debug_frame   0x000014f0       0x28 build/configRover/production/_ext/369138285/system_init.o
+ .debug_frame   0x00001518       0x6c build/configRover/production/_ext/369138285/system_interrupt.o
+ .debug_frame   0x00001584       0x28 build/configRover/production/_ext/369138285/system_exceptions.o
+ .debug_frame   0x000015ac       0x88 build/configRover/production/_ext/369138285/system_tasks.o
+ .debug_frame   0x00001634       0x40 build/configRover/production/_ext/369138285/rtos_hooks.o
+ .debug_frame   0x00001674       0x2c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_frame   0x000016a0       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_frame   0x000016c0       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_frame   0x000016e0       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_frame   0x00001700       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
+ .debug_frame   0x00001728       0x38 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
+ .debug_frame   0x00001760       0x2c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
+ .debug_frame   0x0000178c       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
+ .debug_frame   0x000017b4       0x38 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
+ .debug_frame   0x000017ec       0x28 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
+ .debug_frame   0x00001814       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+ .debug_frame   0x00001834       0x20 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
 
-.debug_str      0x00000000      0x7c0
+.debug_str      0x00000000      0x825
  *(.debug_str)
- .debug_str     0x00000000       0x31 build/configRover/production/_ext/1360937237/communication.o
- .debug_str     0x00000031        0x0 build/configRover/production/_ext/1360937237/main.o
- .debug_str     0x00000031       0x22 build/configRover/production/_ext/1360937237/sensorCommunication.o
- .debug_str     0x00000053       0x42 build/configRover/production/_ext/1360937237/motor.o
- .debug_str     0x00000095       0x1b build/configRover/production/_ext/1536116519/debug.o
- .debug_str     0x000000b0        0x0 build/configRover/production/_ext/1360937237/timer.o
- .debug_str     0x000000b0       0x40 build/configRover/production/_ext/2006758146/osal_freertos.o
- .debug_str     0x000000f0       0x16 build/configRover/production/_ext/1044950436/sys_devcon.o
- .debug_str     0x00000106        0x6 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .debug_str     0x0000010c       0x2d build/configRover/production/_ext/443798654/sys_int_pic32.o
- .debug_str     0x00000139       0x98 build/configRover/production/_ext/885213861/sys_ports.o
- .debug_str     0x000001d1        0x0 build/configRover/production/_ext/1209819165/croutine.o
- .debug_str     0x000001d1       0x2b build/configRover/production/_ext/1209819165/list.o
- .debug_str     0x000001fc       0xf1 build/configRover/production/_ext/1209819165/queue.o
- .debug_str     0x000002ed      0x174 build/configRover/production/_ext/1209819165/tasks.o
- .debug_str     0x00000461       0xbf build/configRover/production/_ext/1209819165/timers.o
- .debug_str     0x00000520       0xe6 build/configRover/production/_ext/1209819165/event_groups.o
- .debug_str     0x00000606       0x1d build/configRover/production/_ext/1343652704/heap_1.o
- .debug_str     0x00000623       0x37 build/configRover/production/_ext/432427763/port.o
- .debug_str     0x0000065a       0x41 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .debug_str     0x0000069b       0x88 build/configRover/production/_ext/1532176561/drv_usart_static.o
- .debug_str     0x00000723       0x39 build/configRover/production/_ext/249367850/sys_clk_static.o
- .debug_str     0x0000075c        0xd build/configRover/production/_ext/1926720346/sys_ports_static.o
- .debug_str     0x00000769       0x16 build/configRover/production/_ext/369138285/system_init.o
- .debug_str     0x0000077f       0x38 build/configRover/production/_ext/369138285/system_interrupt.o
- .debug_str     0x000007b7        0x0 build/configRover/production/_ext/369138285/system_exceptions.o
- .debug_str     0x000007b7        0x0 build/configRover/production/_ext/369138285/system_tasks.o
- .debug_str     0x000007b7        0x9 build/configRover/production/_ext/369138285/rtos_hooks.o
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(xc32_uart.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
- .debug_str     0x000007c0        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+ .debug_str     0x00000000       0x4d build/configRover/production/_ext/1360937237/communication.o
+ .debug_str     0x0000004d        0x0 build/configRover/production/_ext/1360937237/main.o
+ .debug_str     0x0000004d       0x4c build/configRover/production/_ext/1360937237/sensorCommunication.o
+ .debug_str     0x00000099       0x42 build/configRover/production/_ext/1360937237/motor.o
+ .debug_str     0x000000db       0x1b build/configRover/production/_ext/1536116519/debug.o
+ .debug_str     0x000000f6        0x0 build/configRover/production/_ext/1360937237/timer.o
+ .debug_str     0x000000f6       0x40 build/configRover/production/_ext/2006758146/osal_freertos.o
+ .debug_str     0x00000136       0x16 build/configRover/production/_ext/1044950436/sys_devcon.o
+ .debug_str     0x0000014c        0x6 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .debug_str     0x00000152       0x2d build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .debug_str     0x0000017f       0x98 build/configRover/production/_ext/885213861/sys_ports.o
+ .debug_str     0x00000217        0x0 build/configRover/production/_ext/1209819165/croutine.o
+ .debug_str     0x00000217       0x2b build/configRover/production/_ext/1209819165/list.o
+ .debug_str     0x00000242       0xf1 build/configRover/production/_ext/1209819165/queue.o
+ .debug_str     0x00000333      0x174 build/configRover/production/_ext/1209819165/tasks.o
+ .debug_str     0x000004a7       0xbf build/configRover/production/_ext/1209819165/timers.o
+ .debug_str     0x00000566       0xe6 build/configRover/production/_ext/1209819165/event_groups.o
+ .debug_str     0x0000064c       0x1d build/configRover/production/_ext/1343652704/heap_1.o
+ .debug_str     0x00000669       0x37 build/configRover/production/_ext/432427763/port.o
+ .debug_str     0x000006a0       0x3b build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .debug_str     0x000006db       0x88 build/configRover/production/_ext/1532176561/drv_usart_static.o
+ .debug_str     0x00000763       0x39 build/configRover/production/_ext/249367850/sys_clk_static.o
+ .debug_str     0x0000079c        0xd build/configRover/production/_ext/1926720346/sys_ports_static.o
+ .debug_str     0x000007a9       0x16 build/configRover/production/_ext/369138285/system_init.o
+ .debug_str     0x000007bf       0x5d build/configRover/production/_ext/369138285/system_interrupt.o
+ .debug_str     0x0000081c        0x0 build/configRover/production/_ext/369138285/system_exceptions.o
+ .debug_str     0x0000081c        0x0 build/configRover/production/_ext/369138285/system_tasks.o
+ .debug_str     0x0000081c        0x9 build/configRover/production/_ext/369138285/rtos_hooks.o
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(xc32_uart.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+ .debug_str     0x00000825        0x0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
 
-.debug_loc      0x00000000     0x6d71
+.debug_loc      0x00000000     0x6d00
  *(.debug_loc)
- .debug_loc     0x00000000      0x4ec build/configRover/production/_ext/1360937237/communication.o
- .debug_loc     0x000004ec      0x3ae build/configRover/production/_ext/1360937237/sensorCommunication.o
- .debug_loc     0x0000089a      0x2a8 build/configRover/production/_ext/1360937237/motor.o
- .debug_loc     0x00000b42       0xfa build/configRover/production/_ext/1536116519/debug.o
- .debug_loc     0x00000c3c       0x92 build/configRover/production/_ext/1360937237/timer.o
- .debug_loc     0x00000cce      0x40c build/configRover/production/_ext/2006758146/osal_freertos.o
- .debug_loc     0x000010da       0xf0 build/configRover/production/_ext/1044950436/sys_devcon.o
- .debug_loc     0x000011ca       0xe0 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .debug_loc     0x000012aa       0x8d build/configRover/production/_ext/443798654/sys_int_pic32.o
- .debug_loc     0x00001337      0xee1 build/configRover/production/_ext/885213861/sys_ports.o
- .debug_loc     0x00002218       0x31 build/configRover/production/_ext/1209819165/list.o
- .debug_loc     0x00002249      0xd35 build/configRover/production/_ext/1209819165/queue.o
- .debug_loc     0x00002f7e     0x1505 build/configRover/production/_ext/1209819165/tasks.o
- .debug_loc     0x00004483      0x7c0 build/configRover/production/_ext/1209819165/timers.o
- .debug_loc     0x00004c43      0x8ea build/configRover/production/_ext/1209819165/event_groups.o
- .debug_loc     0x0000552d       0x49 build/configRover/production/_ext/1343652704/heap_1.o
- .debug_loc     0x00005576       0xea build/configRover/production/_ext/432427763/port.o
- .debug_loc     0x00005660       0x42 build/configRover/production/_ext/1797679462/drv_tmr_static.o
- .debug_loc     0x000056a2       0x9a build/configRover/production/_ext/1532176561/drv_usart_static.o
- .debug_loc     0x0000573c       0x21 build/configRover/production/_ext/249367850/sys_clk_static.o
- .debug_loc     0x0000575d       0x21 build/configRover/production/_ext/369138285/system_init.o
- .debug_loc     0x0000577e      0x118 build/configRover/production/_ext/369138285/system_interrupt.o
- .debug_loc     0x00005896       0x34 build/configRover/production/_ext/369138285/rtos_hooks.o
- .debug_loc     0x000058ca      0xa6a /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
- .debug_loc     0x00006334      0xa3d /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+ .debug_loc     0x00000000      0x4a7 build/configRover/production/_ext/1360937237/communication.o
+ .debug_loc     0x000004a7      0x3a3 build/configRover/production/_ext/1360937237/sensorCommunication.o
+ .debug_loc     0x0000084a      0x2a8 build/configRover/production/_ext/1360937237/motor.o
+ .debug_loc     0x00000af2       0xfa build/configRover/production/_ext/1536116519/debug.o
+ .debug_loc     0x00000bec       0x92 build/configRover/production/_ext/1360937237/timer.o
+ .debug_loc     0x00000c7e      0x40c build/configRover/production/_ext/2006758146/osal_freertos.o
+ .debug_loc     0x0000108a       0xf0 build/configRover/production/_ext/1044950436/sys_devcon.o
+ .debug_loc     0x0000117a       0xe0 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .debug_loc     0x0000125a       0x8d build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .debug_loc     0x000012e7      0xee1 build/configRover/production/_ext/885213861/sys_ports.o
+ .debug_loc     0x000021c8       0x31 build/configRover/production/_ext/1209819165/list.o
+ .debug_loc     0x000021f9      0xd35 build/configRover/production/_ext/1209819165/queue.o
+ .debug_loc     0x00002f2e     0x1505 build/configRover/production/_ext/1209819165/tasks.o
+ .debug_loc     0x00004433      0x7c0 build/configRover/production/_ext/1209819165/timers.o
+ .debug_loc     0x00004bf3      0x8ea build/configRover/production/_ext/1209819165/event_groups.o
+ .debug_loc     0x000054dd       0x49 build/configRover/production/_ext/1343652704/heap_1.o
+ .debug_loc     0x00005526       0xea build/configRover/production/_ext/432427763/port.o
+ .debug_loc     0x00005610       0x21 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .debug_loc     0x00005631       0x9a build/configRover/production/_ext/1532176561/drv_usart_static.o
+ .debug_loc     0x000056cb       0x21 build/configRover/production/_ext/249367850/sys_clk_static.o
+ .debug_loc     0x000056ec       0x21 build/configRover/production/_ext/369138285/system_init.o
+ .debug_loc     0x0000570d      0x118 build/configRover/production/_ext/369138285/system_interrupt.o
+ .debug_loc     0x00005825       0x34 build/configRover/production/_ext/369138285/rtos_hooks.o
+ .debug_loc     0x00005859      0xa6a /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+ .debug_loc     0x000062c3      0xa3d /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2227,21 +2228,21 @@ END GROUP
  .debug_ranges  0x000000e0       0x10 build/configRover/production/_ext/1360937237/main.o
  .debug_ranges  0x000000f0       0xd0 build/configRover/production/_ext/1360937237/sensorCommunication.o
  .debug_ranges  0x000001c0       0x60 build/configRover/production/_ext/1360937237/motor.o
- .debug_ranges  0x00000220       0x40 build/configRover/production/_ext/1536116519/debug.o
- .debug_ranges  0x00000260       0x18 build/configRover/production/_ext/1360937237/timer.o
- .debug_ranges  0x00000278       0x78 build/configRover/production/_ext/2006758146/osal_freertos.o
- .debug_ranges  0x000002f0       0x68 build/configRover/production/_ext/1044950436/sys_devcon.o
- .debug_ranges  0x00000358       0x10 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
- .debug_ranges  0x00000368       0x50 build/configRover/production/_ext/443798654/sys_int_pic32.o
- .debug_ranges  0x000003b8       0xe8 build/configRover/production/_ext/885213861/sys_ports.o
- .debug_ranges  0x000004a0       0x30 build/configRover/production/_ext/1209819165/list.o
- .debug_ranges  0x000004d0       0xa8 build/configRover/production/_ext/1209819165/queue.o
- .debug_ranges  0x00000578      0x1b0 build/configRover/production/_ext/1209819165/tasks.o
- .debug_ranges  0x00000728       0xe8 build/configRover/production/_ext/1209819165/timers.o
- .debug_ranges  0x00000810       0x98 build/configRover/production/_ext/1209819165/event_groups.o
- .debug_ranges  0x000008a8       0x28 build/configRover/production/_ext/1343652704/heap_1.o
- .debug_ranges  0x000008d0       0x48 build/configRover/production/_ext/432427763/port.o
- .debug_ranges  0x00000918       0x68 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+ .debug_ranges  0x00000220       0x70 build/configRover/production/_ext/1536116519/debug.o
+ .debug_ranges  0x00000290       0x18 build/configRover/production/_ext/1360937237/timer.o
+ .debug_ranges  0x000002a8       0x78 build/configRover/production/_ext/2006758146/osal_freertos.o
+ .debug_ranges  0x00000320       0x68 build/configRover/production/_ext/1044950436/sys_devcon.o
+ .debug_ranges  0x00000388       0x10 build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+ .debug_ranges  0x00000398       0x50 build/configRover/production/_ext/443798654/sys_int_pic32.o
+ .debug_ranges  0x000003e8       0xe8 build/configRover/production/_ext/885213861/sys_ports.o
+ .debug_ranges  0x000004d0       0x30 build/configRover/production/_ext/1209819165/list.o
+ .debug_ranges  0x00000500       0xa8 build/configRover/production/_ext/1209819165/queue.o
+ .debug_ranges  0x000005a8      0x1b0 build/configRover/production/_ext/1209819165/tasks.o
+ .debug_ranges  0x00000758       0xe8 build/configRover/production/_ext/1209819165/timers.o
+ .debug_ranges  0x00000840       0x98 build/configRover/production/_ext/1209819165/event_groups.o
+ .debug_ranges  0x000008d8       0x28 build/configRover/production/_ext/1343652704/heap_1.o
+ .debug_ranges  0x00000900       0x48 build/configRover/production/_ext/432427763/port.o
+ .debug_ranges  0x00000948       0x38 build/configRover/production/_ext/1797679462/drv_tmr_static.o
  .debug_ranges  0x00000980       0x58 build/configRover/production/_ext/1532176561/drv_usart_static.o
  .debug_ranges  0x000009d8       0x28 build/configRover/production/_ext/249367850/sys_clk_static.o
  .debug_ranges  0x00000a00       0x10 build/configRover/production/_ext/1926720346/sys_ports_static.o
@@ -2373,24 +2374,24 @@ LOAD data_init
 .reginfo        0x00000000       0x18
  .reginfo       0x00000000       0x18 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX795F512L/crt0_mips32r2.o
 
-.stack          0xa0005920      0x400
- .stack         0xa0005920      0x400 stack
+.stack          0xa0005930      0x400
+ .stack         0xa0005930      0x400 stack
 
-.bss            0xa0000144     0x5708
- .bss           0xa0000144     0x5000 build/configRover/production/_ext/1343652704/heap_1.o
- .bss           0xa0005144      0x640 build/configRover/production/_ext/432427763/port.o
-                0xa0005144                xISRStack
- .bss           0xa0005784       0xc8 build/configRover/production/_ext/1209819165/tasks.o
+.bss            0xa0000154     0x5708
+ .bss           0xa0000154     0x5000 build/configRover/production/_ext/1343652704/heap_1.o
+ .bss           0xa0005154      0x640 build/configRover/production/_ext/432427763/port.o
+                0xa0005154                xISRStack
+ .bss           0xa0005794       0xc8 build/configRover/production/_ext/1209819165/tasks.o
 
-.data           0xa000584c       0x4c
- .data          0xa000584c       0x4c build/configRover/production/_ext/369138285/system_exceptions.o
+.data           0xa000585c       0x4c
+ .data          0xa000585c       0x4c build/configRover/production/_ext/369138285/system_exceptions.o
 
-.bss            0xa0005898       0x6c
- .bss           0xa0005898       0x44 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
-                0xa0005898                _outdone
-                0xa000589c                _sibuf
-                0xa00058bc                _sobuf
- .bss           0xa00058dc       0x28 build/configRover/production/_ext/1209819165/timers.o
+.bss            0xa00058a8       0x6c
+ .bss           0xa00058a8       0x44 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_iob.o)
+                0xa00058a8                _outdone
+                0xa00058ac                _sibuf
+                0xa00058cc                _sobuf
+ .bss           0xa00058ec       0x28 build/configRover/production/_ext/1209819165/timers.o
 
 ._debug_exception
                 0xbfc00480       0x2c
@@ -2405,816 +2406,864 @@ LOAD data_init
                 0x9d000000                _vfprintf_cdnopuxX
 
 .text.communication_sendIntMsg
-                0x9d000ad0      0x4b0
+                0x9d000ad0      0x4a4
  .text.communication_sendIntMsg
-                0x9d000ad0      0x4b0 build/configRover/production/_ext/1360937237/communication.o
+                0x9d000ad0      0x4a4 build/configRover/production/_ext/1360937237/communication.o
                 0x9d000ad0                communication_sendIntMsg
 
-.text           0x9d000f80      0xd10
- .text          0x9d000f80      0x464 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
-                0x9d000f80                __umoddi3
- .text          0x9d0013e4      0x458 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
-                0x9d0013e4                __udivdi3
- .text          0x9d00183c      0x454 build/configRover/production/_ext/432427763/port_asm.o
-                0x9d00183c                vPortTickInterruptHandler
-                0x9d0019e8                vPortStartFirstTask
-                0x9d001ab0                vPortYieldISR
+.text           0x9d000f74      0xd10
+ .text          0x9d000f74      0x464 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_umoddi3.o)
+                0x9d000f74                __umoddi3
+ .text          0x9d0013d8      0x458 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/libgcc.a(_udivdi3.o)
+                0x9d0013d8                __udivdi3
+ .text          0x9d001830      0x454 build/configRover/production/_ext/432427763/port_asm.o
+                0x9d001830                vPortTickInterruptHandler
+                0x9d0019dc                vPortStartFirstTask
+                0x9d001aa4                vPortYieldISR
 
 .text.COMMUNICATION_Tasks
-                0x9d001c90      0x304
+                0x9d001c84      0x300
  .text.COMMUNICATION_Tasks
-                0x9d001c90      0x304 build/configRover/production/_ext/1360937237/communication.o
-                0x9d001c90                COMMUNICATION_Tasks
+                0x9d001c84      0x300 build/configRover/production/_ext/1360937237/communication.o
+                0x9d001c84                COMMUNICATION_Tasks
 
 .text.SENSORCOMMUNICATION_Tasks
-                0x9d001f94      0x2fc
+                0x9d001f84      0x2f8
  .text.SENSORCOMMUNICATION_Tasks
-                0x9d001f94      0x2fc build/configRover/production/_ext/1360937237/sensorCommunication.o
-                0x9d001f94                SENSORCOMMUNICATION_Tasks
+                0x9d001f84      0x2f8 build/configRover/production/_ext/1360937237/sensorCommunication.o
+                0x9d001f84                SENSORCOMMUNICATION_Tasks
 
 .text.xTaskGenericCreate
-                0x9d002290      0x2e0
+                0x9d00227c      0x2e0
  .text.xTaskGenericCreate
-                0x9d002290      0x2e0 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d002290                xTaskGenericCreate
+                0x9d00227c      0x2e0 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d00227c                xTaskGenericCreate
 
 .text.prvTimerTask
-                0x9d002570      0x264
+                0x9d00255c      0x264
  .text.prvTimerTask
-                0x9d002570      0x264 build/configRover/production/_ext/1209819165/timers.o
+                0x9d00255c      0x264 build/configRover/production/_ext/1209819165/timers.o
 
 .text.xQueueGenericReceive
-                0x9d0027d4      0x24c
+                0x9d0027c0      0x24c
  .text.xQueueGenericReceive
-                0x9d0027d4      0x24c build/configRover/production/_ext/1209819165/queue.o
-                0x9d0027d4                xQueueGenericReceive
+                0x9d0027c0      0x24c build/configRover/production/_ext/1209819165/queue.o
+                0x9d0027c0                xQueueGenericReceive
 
 .text.xQueueGenericSend
-                0x9d002a20      0x208
+                0x9d002a0c      0x208
  .text.xQueueGenericSend
-                0x9d002a20      0x208 build/configRover/production/_ext/1209819165/queue.o
-                0x9d002a20                xQueueGenericSend
+                0x9d002a0c      0x208 build/configRover/production/_ext/1209819165/queue.o
+                0x9d002a0c                xQueueGenericSend
 
 .text.MOTOR_Tasks
-                0x9d002c28      0x1d4
+                0x9d002c14      0x1d4
  .text.MOTOR_Tasks
-                0x9d002c28      0x1d4 build/configRover/production/_ext/1360937237/motor.o
-                0x9d002c28                MOTOR_Tasks
+                0x9d002c14      0x1d4 build/configRover/production/_ext/1360937237/motor.o
+                0x9d002c14                MOTOR_Tasks
 
 .DrvTmrInstance0_vector_text
-                0x9d002dfc      0x1b4
+                0x9d002de8      0x1b4
  .DrvTmrInstance0_vector_text
-                0x9d002dfc      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
+                0x9d002de8      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
 
 .DrvUsartInstance0_vector_text
-                0x9d002fb0      0x1b4
+                0x9d002f9c      0x1b4
  .DrvUsartInstance0_vector_text
-                0x9d002fb0      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
+                0x9d002f9c      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
 
 .DrvUsartInstance1_vector_text
-                0x9d003164      0x1b4
+                0x9d003150      0x1b4
  .DrvUsartInstance1_vector_text
-                0x9d003164      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
+                0x9d003150      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
 
 .DrvUsartInstance2_vector_text
-                0x9d003318      0x1b4
+                0x9d003304      0x1b4
  .DrvUsartInstance2_vector_text
-                0x9d003318      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
+                0x9d003304      0x1b4 build/configRover/production/_ext/369138285/system_interrupt_a.o
 
 .text.xTaskIncrementTick
-                0x9d0034cc      0x19c
+                0x9d0034b8      0x19c
  .text.xTaskIncrementTick
-                0x9d0034cc      0x19c build/configRover/production/_ext/1209819165/tasks.o
-                0x9d0034cc                xTaskIncrementTick
+                0x9d0034b8      0x19c build/configRover/production/_ext/1209819165/tasks.o
+                0x9d0034b8                xTaskIncrementTick
 
-.text           0x9d003668      0x168
- .text          0x9d003668      0x168 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(memcpy.o)
-                0x9d003668                memcpy
+.text           0x9d003654      0x168
+ .text          0x9d003654      0x168 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(memcpy.o)
+                0x9d003654                memcpy
 
 .text.xTaskResumeAll
-                0x9d0037d0      0x154
+                0x9d0037bc      0x154
  .text.xTaskResumeAll
-                0x9d0037d0      0x154 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d0037d0                xTaskResumeAll
+                0x9d0037bc      0x154 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d0037bc                xTaskResumeAll
 
-.text.fputc     0x9d003924      0x144
- .text.fputc    0x9d003924      0x144 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
-                0x9d003924                fputc
+.text.fputc     0x9d003910      0x144
+ .text.fputc    0x9d003910      0x144 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_fputc_simple.o)
+                0x9d003910                fputc
 
-.dinit          0x9d003a68      0x130
- .dinit         0x9d003a68      0x130 data_init
+.dinit          0x9d003a54      0x130
+ .dinit         0x9d003a54      0x130 data_init
 
 .text.vTaskPriorityInherit
-                0x9d003b98      0x12c
+                0x9d003b84      0x12c
  .text.vTaskPriorityInherit
-                0x9d003b98      0x12c build/configRover/production/_ext/1209819165/tasks.o
-                0x9d003b98                vTaskPriorityInherit
+                0x9d003b84      0x12c build/configRover/production/_ext/1209819165/tasks.o
+                0x9d003b84                vTaskPriorityInherit
 
-.text._flsbuf   0x9d003cc4      0x12c
- .text._flsbuf  0x9d003cc4      0x12c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
-                0x9d003cc4                _flsbuf
+.text._flsbuf   0x9d003cb0      0x12c
+ .text._flsbuf  0x9d003cb0      0x12c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(_flsbuf_simple.o)
+                0x9d003cb0                _flsbuf
 
 .text.DRV_USART1_Initialize
-                0x9d003df0      0x108
+                0x9d003ddc      0x108
  .text.DRV_USART1_Initialize
-                0x9d003df0      0x108 build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d003df0                DRV_USART1_Initialize
+                0x9d003ddc      0x108 build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d003ddc                DRV_USART1_Initialize
 
 .text.prvUnlockQueue
-                0x9d003ef8      0x104
+                0x9d003ee4      0x104
  .text.prvUnlockQueue
-                0x9d003ef8      0x104 build/configRover/production/_ext/1209819165/queue.o
+                0x9d003ee4      0x104 build/configRover/production/_ext/1209819165/queue.o
 
 .text.prvSampleTimeNow
-                0x9d003ffc      0x104
+                0x9d003fe8      0x104
  .text.prvSampleTimeNow
-                0x9d003ffc      0x104 build/configRover/production/_ext/1209819165/timers.o
+                0x9d003fe8      0x104 build/configRover/production/_ext/1209819165/timers.o
 
-.rodata         0x9d004100      0x104
- .rodata        0x9d004100      0x104 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
-                0x9d004100                _ctype
+.rodata         0x9d0040ec      0x104
+ .rodata        0x9d0040ec      0x104 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(ctype.o)
+                0x9d0040ec                _ctype
 
 .text.prvCopyDataToQueue
-                0x9d004204       0xfc
+                0x9d0041f0       0xfc
  .text.prvCopyDataToQueue
-                0x9d004204       0xfc build/configRover/production/_ext/1209819165/queue.o
+                0x9d0041f0       0xfc build/configRover/production/_ext/1209819165/queue.o
 
 .text.xTaskPriorityDisinherit
-                0x9d004300       0xf8
+                0x9d0042ec       0xf8
  .text.xTaskPriorityDisinherit
-                0x9d004300       0xf8 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d004300                xTaskPriorityDisinherit
+                0x9d0042ec       0xf8 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d0042ec                xTaskPriorityDisinherit
 
 .text.DRV_USART2_Initialize
-                0x9d0043f8       0xec
+                0x9d0043e4       0xec
  .text.DRV_USART2_Initialize
-                0x9d0043f8       0xec build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d0043f8                DRV_USART2_Initialize
+                0x9d0043e4       0xec build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d0043e4                DRV_USART2_Initialize
 
 .text.sensorcommunication_getByteISR
-                0x9d0044e4       0xe8
+                0x9d0044d0       0xe8
  .text.sensorcommunication_getByteISR
-                0x9d0044e4       0xe8 build/configRover/production/_ext/1360937237/sensorCommunication.o
-                0x9d0044e4                sensorcommunication_getByteISR
+                0x9d0044d0       0xe8 build/configRover/production/_ext/1360937237/sensorCommunication.o
+                0x9d0044d0                sensorcommunication_getByteISR
 
 .text.xQueueGenericSendFromISR
-                0x9d0045cc       0xe8
+                0x9d0045b8       0xe8
  .text.xQueueGenericSendFromISR
-                0x9d0045cc       0xe8 build/configRover/production/_ext/1209819165/queue.o
-                0x9d0045cc                xQueueGenericSendFromISR
+                0x9d0045b8       0xe8 build/configRover/production/_ext/1209819165/queue.o
+                0x9d0045b8                xQueueGenericSendFromISR
 
 .text.DRV_USART0_Initialize
-                0x9d0046b4       0xe8
+                0x9d0046a0       0xe8
  .text.DRV_USART0_Initialize
-                0x9d0046b4       0xe8 build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d0046b4                DRV_USART0_Initialize
+                0x9d0046a0       0xe8 build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d0046a0                DRV_USART0_Initialize
 
 .text.SYS_DEVCON_PerformanceConfig
-                0x9d00479c       0xdc
+                0x9d004788       0xdc
  .text.SYS_DEVCON_PerformanceConfig
-                0x9d00479c       0xdc build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
-                0x9d00479c                SYS_DEVCON_PerformanceConfig
+                0x9d004788       0xdc build/configRover/production/_ext/1044950436/sys_devcon_pic32mx.o
+                0x9d004788                SYS_DEVCON_PerformanceConfig
 
 .text.vTaskSwitchContext
-                0x9d004878       0xdc
+                0x9d004864       0xdc
  .text.vTaskSwitchContext
-                0x9d004878       0xdc build/configRover/production/_ext/1209819165/tasks.o
-                0x9d004878                vTaskSwitchContext
+                0x9d004864       0xdc build/configRover/production/_ext/1209819165/tasks.o
+                0x9d004864                vTaskSwitchContext
 
-.rodata         0x9d004954       0xdc
- .rodata        0x9d004954       0xdc build/configRover/production/_ext/369138285/system_exceptions.o
+.rodata         0x9d004940       0xdc
+ .rodata        0x9d004940       0xdc build/configRover/production/_ext/369138285/system_exceptions.o
 
 .text.general_exception
-                0x9d004a30       0xdc
+                0x9d004a1c       0xdc
  .text.general_exception
-                0x9d004a30       0xdc /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(general-exception.o)
-                0x9d004a30                _general_exception_context
+                0x9d004a1c       0xdc /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(general-exception.o)
+                0x9d004a1c                _general_exception_context
 
 .text.SYS_Tasks
-                0x9d004b0c       0xd8
+                0x9d004af8       0xd8
  .text.SYS_Tasks
-                0x9d004b0c       0xd8 build/configRover/production/_ext/369138285/system_tasks.o
-                0x9d004b0c                SYS_Tasks
+                0x9d004af8       0xd8 build/configRover/production/_ext/369138285/system_tasks.o
+                0x9d004af8                SYS_Tasks
 
 .text.communication_getByteISR
-                0x9d004be4       0xd4
+                0x9d004bd0       0xd4
  .text.communication_getByteISR
-                0x9d004be4       0xd4 build/configRover/production/_ext/1360937237/communication.o
-                0x9d004be4                communication_getByteISR
+                0x9d004bd0       0xd4 build/configRover/production/_ext/1360937237/communication.o
+                0x9d004bd0                communication_getByteISR
 
 .text.xQueueReceiveFromISR
-                0x9d004cb8       0xd4
+                0x9d004ca4       0xd4
  .text.xQueueReceiveFromISR
-                0x9d004cb8       0xd4 build/configRover/production/_ext/1209819165/queue.o
-                0x9d004cb8                xQueueReceiveFromISR
+                0x9d004ca4       0xd4 build/configRover/production/_ext/1209819165/queue.o
+                0x9d004ca4                xQueueReceiveFromISR
 
 .text._mon_putc
-                0x9d004d8c       0xd4
+                0x9d004d78       0xd4
  .text._mon_putc
-                0x9d004d8c       0xd4 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
-                0x9d004d8c                _mon_putc
+                0x9d004d78       0xd4 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(_mon_putc.o)
+                0x9d004d78                _mon_putc
 
-.rodata         0x9d004e60      0x19c
- .rodata        0x9d004e60       0xd0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
- .rodata        0x9d004f30       0xcc build/configRover/production/_ext/1360937237/sensorCommunication.o
+.rodata         0x9d004e50      0x268
+ .rodata        0x9d004e50       0xd0 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(doprnt_cdnopuxX.eo)
+ .rodata        0x9d004f20       0xcc build/configRover/production/_ext/1360937237/communication.o
+ .rodata        0x9d004fec       0xcc build/configRover/production/_ext/1360937237/sensorCommunication.o
 
 .text.IntHandlerDrvUsartInstance1
-                0x9d004ffc       0xc8
+                0x9d0050b8       0xc8
  .text.IntHandlerDrvUsartInstance1
-                0x9d004ffc       0xc8 build/configRover/production/_ext/369138285/system_interrupt.o
-                0x9d004ffc                IntHandlerDrvUsartInstance1
+                0x9d0050b8       0xc8 build/configRover/production/_ext/369138285/system_interrupt.o
+                0x9d0050b8                IntHandlerDrvUsartInstance1
 
 .text.IntHandlerDrvUsartInstance2
-                0x9d0050c4       0xc8
+                0x9d005180       0xc8
  .text.IntHandlerDrvUsartInstance2
-                0x9d0050c4       0xc8 build/configRover/production/_ext/369138285/system_interrupt.o
-                0x9d0050c4                IntHandlerDrvUsartInstance2
+                0x9d005180       0xc8 build/configRover/production/_ext/369138285/system_interrupt.o
+                0x9d005180                IntHandlerDrvUsartInstance2
 
 .text.xQueueGenericReset
-                0x9d00518c       0xc4
+                0x9d005248       0xc4
  .text.xQueueGenericReset
-                0x9d00518c       0xc4 build/configRover/production/_ext/1209819165/queue.o
-                0x9d00518c                xQueueGenericReset
+                0x9d005248       0xc4 build/configRover/production/_ext/1209819165/queue.o
+                0x9d005248                xQueueGenericReset
 
 .text.xTaskRemoveFromEventList
-                0x9d005250       0xbc
+                0x9d00530c       0xbc
  .text.xTaskRemoveFromEventList
-                0x9d005250       0xbc build/configRover/production/_ext/1209819165/tasks.o
-                0x9d005250                xTaskRemoveFromEventList
+                0x9d00530c       0xbc build/configRover/production/_ext/1209819165/tasks.o
+                0x9d00530c                xTaskRemoveFromEventList
 
 .text.pvPortMalloc
-                0x9d00530c       0xb8
+                0x9d0053c8       0xb8
  .text.pvPortMalloc
-                0x9d00530c       0xb8 build/configRover/production/_ext/1343652704/heap_1.o
-                0x9d00530c                pvPortMalloc
+                0x9d0053c8       0xb8 build/configRover/production/_ext/1343652704/heap_1.o
+                0x9d0053c8                pvPortMalloc
 
 .text.prvIdleTask
-                0x9d0053c4       0xb4
+                0x9d005480       0xb4
  .text.prvIdleTask
-                0x9d0053c4       0xb4 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d005480       0xb4 build/configRover/production/_ext/1209819165/tasks.o
 
 .text.IntToChar
-                0x9d005478       0xb0
+                0x9d005534       0xb0
  .text.IntToChar
-                0x9d005478       0xb0 build/configRover/production/_ext/1360937237/communication.o
-                0x9d005478                IntToChar
-
-.rodata         0x9d005528       0xac
- .rodata        0x9d005528       0xac build/configRover/production/_ext/1360937237/communication.o
+                0x9d005534       0xb0 build/configRover/production/_ext/1360937237/communication.o
+                0x9d005534                IntToChar
 
 .text.MOTOR_Initialize
-                0x9d0055d4       0xac
+                0x9d0055e4       0xac
  .text.MOTOR_Initialize
-                0x9d0055d4       0xac build/configRover/production/_ext/1360937237/motor.o
-                0x9d0055d4                MOTOR_Initialize
+                0x9d0055e4       0xac build/configRover/production/_ext/1360937237/motor.o
+                0x9d0055e4                MOTOR_Initialize
 
-.text           0x9d005680       0xa8
- .text          0x9d005680       0xa8 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(memset.o)
-                0x9d005680                memset
+.text           0x9d005690       0xa8
+ .text          0x9d005690       0xa8 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(memset.o)
+                0x9d005690                memset
 
 .text.xTaskCheckForTimeOut
-                0x9d005728       0xa0
+                0x9d005738       0xa0
  .text.xTaskCheckForTimeOut
-                0x9d005728       0xa0 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d005728                xTaskCheckForTimeOut
+                0x9d005738       0xa0 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d005738                xTaskCheckForTimeOut
 
-.text.write     0x9d0057c8       0x9c
- .text.write    0x9d0057c8       0x9c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
-                0x9d0057c8                write
+.text.write     0x9d0057d8       0x9c
+ .text.write    0x9d0057d8       0x9c /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(write.o)
+                0x9d0057d8                write
 
 .text.xTimerCreate
-                0x9d005864       0x98
+                0x9d005874       0x98
  .text.xTimerCreate
-                0x9d005864       0x98 build/configRover/production/_ext/1209819165/timers.o
-                0x9d005864                xTimerCreate
+                0x9d005874       0x98 build/configRover/production/_ext/1209819165/timers.o
+                0x9d005874                xTimerCreate
 
-.text           0x9d0058fc       0x98
- .text          0x9d0058fc       0x98 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(memcmp.o)
-                0x9d0058fc                memcmp
+.text           0x9d00590c       0x98
+ .text          0x9d00590c       0x98 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(memcmp.o)
+                0x9d00590c                memcmp
 
 .text.xQueueGenericCreate
-                0x9d005994       0x94
+                0x9d0059a4       0x94
  .text.xQueueGenericCreate
-                0x9d005994       0x94 build/configRover/production/_ext/1209819165/queue.o
-                0x9d005994                xQueueGenericCreate
+                0x9d0059a4       0x94 build/configRover/production/_ext/1209819165/queue.o
+                0x9d0059a4                xQueueGenericCreate
 
 .text.vTaskPlaceOnEventList
-                0x9d005a28       0x94
+                0x9d005a38       0x94
  .text.vTaskPlaceOnEventList
-                0x9d005a28       0x94 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d005a28                vTaskPlaceOnEventList
+                0x9d005a38       0x94 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d005a38                vTaskPlaceOnEventList
 
 .text.xTimerGenericCommand
-                0x9d005abc       0x94
+                0x9d005acc       0x94
  .text.xTimerGenericCommand
-                0x9d005abc       0x94 build/configRover/production/_ext/1209819165/timers.o
-                0x9d005abc                xTimerGenericCommand
+                0x9d005acc       0x94 build/configRover/production/_ext/1209819165/timers.o
+                0x9d005acc                xTimerGenericCommand
 
 .text.SYS_Initialize
-                0x9d005b50       0x94
+                0x9d005b60       0x94
  .text.SYS_Initialize
-                0x9d005b50       0x94 build/configRover/production/_ext/369138285/system_init.o
-                0x9d005b50                SYS_Initialize
+                0x9d005b60       0x94 build/configRover/production/_ext/369138285/system_init.o
+                0x9d005b60                SYS_Initialize
 
 .text.vTaskDelay
-                0x9d005be4       0x90
+                0x9d005bf4       0x90
  .text.vTaskDelay
-                0x9d005be4       0x90 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d005be4                vTaskDelay
+                0x9d005bf4       0x90 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d005bf4                vTaskDelay
 
 .text.vTaskStartScheduler
-                0x9d005c74       0x90
+                0x9d005c84       0x90
  .text.vTaskStartScheduler
-                0x9d005c74       0x90 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d005c74                vTaskStartScheduler
+                0x9d005c84       0x90 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d005c84                vTaskStartScheduler
 
 .text.COMMUNICATION_Initialize
-                0x9d005d04       0x88
+                0x9d005d14       0x8c
  .text.COMMUNICATION_Initialize
-                0x9d005d04       0x88 build/configRover/production/_ext/1360937237/communication.o
-                0x9d005d04                COMMUNICATION_Initialize
+                0x9d005d14       0x8c build/configRover/production/_ext/1360937237/communication.o
+                0x9d005d14                COMMUNICATION_Initialize
 
 .text.SENSORCOMMUNICATION_Initialize
-                0x9d005d8c       0x88
+                0x9d005da0       0x8c
  .text.SENSORCOMMUNICATION_Initialize
-                0x9d005d8c       0x88 build/configRover/production/_ext/1360937237/sensorCommunication.o
-                0x9d005d8c                SENSORCOMMUNICATION_Initialize
+                0x9d005da0       0x8c build/configRover/production/_ext/1360937237/sensorCommunication.o
+                0x9d005da0                SENSORCOMMUNICATION_Initialize
 
 .text.CharToInt
-                0x9d005e14       0x7c
+                0x9d005e2c       0x7c
  .text.CharToInt
-                0x9d005e14       0x7c build/configRover/production/_ext/1360937237/communication.o
-                0x9d005e14                CharToInt
+                0x9d005e2c       0x7c build/configRover/production/_ext/1360937237/communication.o
+                0x9d005e2c                CharToInt
 
 .text.DRV_TMR0_Initialize
-                0x9d005e90       0x7c
+                0x9d005ea8       0x7c
  .text.DRV_TMR0_Initialize
-                0x9d005e90       0x7c build/configRover/production/_ext/1797679462/drv_tmr_static.o
-                0x9d005e90                DRV_TMR0_Initialize
+                0x9d005ea8       0x7c build/configRover/production/_ext/1797679462/drv_tmr_static.o
+                0x9d005ea8                DRV_TMR0_Initialize
 
 .text.theTimerInit
-                0x9d005f0c       0x78
+                0x9d005f24       0x78
  .text.theTimerInit
-                0x9d005f0c       0x78 build/configRover/production/_ext/1360937237/timer.o
-                0x9d005f0c                theTimerInit
+                0x9d005f24       0x78 build/configRover/production/_ext/1360937237/timer.o
+                0x9d005f24                theTimerInit
 
 .text.vQueueWaitForMessageRestricted
-                0x9d005f84       0x74
+                0x9d005f9c       0x74
  .text.vQueueWaitForMessageRestricted
-                0x9d005f84       0x74 build/configRover/production/_ext/1209819165/queue.o
-                0x9d005f84                vQueueWaitForMessageRestricted
+                0x9d005f9c       0x74 build/configRover/production/_ext/1209819165/queue.o
+                0x9d005f9c                vQueueWaitForMessageRestricted
 
 .text.prvInsertTimerInActiveList
-                0x9d005ff8       0x74
+                0x9d006010       0x74
  .text.prvInsertTimerInActiveList
-                0x9d005ff8       0x74 build/configRover/production/_ext/1209819165/timers.o
+                0x9d006010       0x74 build/configRover/production/_ext/1209819165/timers.o
 
 .text.prvCheckForValidListAndQueue
-                0x9d00606c       0x74
+                0x9d006084       0x74
  .text.prvCheckForValidListAndQueue
-                0x9d00606c       0x74 build/configRover/production/_ext/1209819165/timers.o
+                0x9d006084       0x74 build/configRover/production/_ext/1209819165/timers.o
 
 .text.prvAddCurrentTaskToDelayedList
-                0x9d0060e0       0x70
+                0x9d0060f8       0x70
  .text.prvAddCurrentTaskToDelayedList
-                0x9d0060e0       0x70 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d0060f8       0x70 build/configRover/production/_ext/1209819165/tasks.o
 
 .text.vTaskPlaceOnEventListRestricted
-                0x9d006150       0x6c
+                0x9d006168       0x6c
  .text.vTaskPlaceOnEventListRestricted
-                0x9d006150       0x6c build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006150                vTaskPlaceOnEventListRestricted
+                0x9d006168       0x6c build/configRover/production/_ext/1209819165/tasks.o
+                0x9d006168                vTaskPlaceOnEventListRestricted
 
 .text.vApplicationSetupTickTimerInterrupt
-                0x9d0061bc       0x6c
+                0x9d0061d4       0x6c
  .text.vApplicationSetupTickTimerInterrupt
-                0x9d0061bc       0x6c build/configRover/production/_ext/432427763/port.o
-                0x9d0061bc                vApplicationSetupTickTimerInterrupt
+                0x9d0061d4       0x6c build/configRover/production/_ext/432427763/port.o
+                0x9d0061d4                vApplicationSetupTickTimerInterrupt
 
 .text.vTaskExitCritical
-                0x9d006228       0x68
+                0x9d006240       0x68
  .text.vTaskExitCritical
-                0x9d006228       0x68 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006228                vTaskExitCritical
+                0x9d006240       0x68 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d006240                vTaskExitCritical
 
 .text._sprintf_cdnopuxX
-                0x9d006290       0x68
+                0x9d0062a8       0x68
  .text._sprintf_cdnopuxX
-                0x9d006290       0x68 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
-                0x9d006290                _sprintf_cdnopuxX
+                0x9d0062a8       0x68 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libc.a(sprintf_cdnopuxX.eo)
+                0x9d0062a8                _sprintf_cdnopuxX
 
 .text.xTimerCreateTimerTask
-                0x9d0062f8       0x60
+                0x9d006310       0x60
  .text.xTimerCreateTimerTask
-                0x9d0062f8       0x60 build/configRover/production/_ext/1209819165/timers.o
-                0x9d0062f8                xTimerCreateTimerTask
+                0x9d006310       0x60 build/configRover/production/_ext/1209819165/timers.o
+                0x9d006310                xTimerCreateTimerTask
 
 .text.vListInsert
-                0x9d006358       0x5c
+                0x9d006370       0x5c
  .text.vListInsert
-                0x9d006358       0x5c build/configRover/production/_ext/1209819165/list.o
-                0x9d006358                vListInsert
+                0x9d006370       0x5c build/configRover/production/_ext/1209819165/list.o
+                0x9d006370                vListInsert
 
 .text.xPortStartScheduler
-                0x9d0063b4       0x5c
+                0x9d0063cc       0x5c
  .text.xPortStartScheduler
-                0x9d0063b4       0x5c build/configRover/production/_ext/432427763/port.o
-                0x9d0063b4                xPortStartScheduler
+                0x9d0063cc       0x5c build/configRover/production/_ext/432427763/port.o
+                0x9d0063cc                xPortStartScheduler
 
 .text.SYS_DEVCON_SystemUnlock
-                0x9d006410       0x58
+                0x9d006428       0x58
  .text.SYS_DEVCON_SystemUnlock
-                0x9d006410       0x58 build/configRover/production/_ext/1044950436/sys_devcon.o
-                0x9d006410                SYS_DEVCON_SystemUnlock
+                0x9d006428       0x58 build/configRover/production/_ext/1044950436/sys_devcon.o
+                0x9d006428                SYS_DEVCON_SystemUnlock
 
 .text.SYS_CLK_Initialize
-                0x9d006468       0x58
+                0x9d006480       0x58
  .text.SYS_CLK_Initialize
-                0x9d006468       0x58 build/configRover/production/_ext/249367850/sys_clk_static.o
-                0x9d006468                SYS_CLK_Initialize
+                0x9d006480       0x58 build/configRover/production/_ext/249367850/sys_clk_static.o
+                0x9d006480                SYS_CLK_Initialize
 
 .text.main_entry
-                0x9d0064c0       0x54
+                0x9d0064d8       0x54
  .text.main_entry
-                0x9d0064c0       0x54 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX795F512L/crt0_mips32r2.o
-                0x9d0064f4                __crt0_exit
+                0x9d0064d8       0x54 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/./proc/32MX795F512L/crt0_mips32r2.o
+                0x9d00650c                __crt0_exit
 
 .text.motor_sendmsg
-                0x9d006514       0x54
+                0x9d00652c       0x54
  .text.motor_sendmsg
-                0x9d006514       0x54 build/configRover/production/_ext/1360937237/motor.o
-                0x9d006514                motor_sendmsg
+                0x9d00652c       0x54 build/configRover/production/_ext/1360937237/motor.o
+                0x9d00652c                motor_sendmsg
 
-.text.debugU    0x9d006568       0x54
- .text.debugU   0x9d006568       0x54 build/configRover/production/_ext/1536116519/debug.o
-                0x9d006568                debugU
+.text.debugU    0x9d006580       0x54
+ .text.debugU   0x9d006580       0x54 build/configRover/production/_ext/1536116519/debug.o
+                0x9d006580                debugU
 
 .text.pxPortInitialiseStack
-                0x9d0065bc       0x54
+                0x9d0065d4       0x54
  .text.pxPortInitialiseStack
-                0x9d0065bc       0x54 build/configRover/production/_ext/432427763/port.o
-                0x9d0065bc                pxPortInitialiseStack
+                0x9d0065d4       0x54 build/configRover/production/_ext/432427763/port.o
+                0x9d0065d4                pxPortInitialiseStack
 
 .text.vPortIncrementTick
-                0x9d006610       0x54
+                0x9d006628       0x54
  .text.vPortIncrementTick
-                0x9d006610       0x54 build/configRover/production/_ext/432427763/port.o
-                0x9d006610                vPortIncrementTick
+                0x9d006628       0x54 build/configRover/production/_ext/432427763/port.o
+                0x9d006628                vPortIncrementTick
 
 .text.motor_durationTick
-                0x9d006664       0x50
+                0x9d00667c       0x50
  .text.motor_durationTick
-                0x9d006664       0x50 build/configRover/production/_ext/1360937237/motor.o
-                0x9d006664                motor_durationTick
+                0x9d00667c       0x50 build/configRover/production/_ext/1360937237/motor.o
+                0x9d00667c                motor_durationTick
 
 .text.prvCopyDataFromQueue
-                0x9d0066b4       0x50
+                0x9d0066cc       0x50
  .text.prvCopyDataFromQueue
-                0x9d0066b4       0x50 build/configRover/production/_ext/1209819165/queue.o
+                0x9d0066cc       0x50 build/configRover/production/_ext/1209819165/queue.o
 
 .text.vTaskEnterCritical
-                0x9d006704       0x50
+                0x9d00671c       0x50
  .text.vTaskEnterCritical
-                0x9d006704       0x50 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006704                vTaskEnterCritical
+                0x9d00671c       0x50 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d00671c                vTaskEnterCritical
 
 .text.SYS_DEVCON_SystemLock
-                0x9d006754       0x48
+                0x9d00676c       0x48
  .text.SYS_DEVCON_SystemLock
-                0x9d006754       0x48 build/configRover/production/_ext/1044950436/sys_devcon.o
-                0x9d006754                SYS_DEVCON_SystemLock
+                0x9d00676c       0x48 build/configRover/production/_ext/1044950436/sys_devcon.o
+                0x9d00676c                SYS_DEVCON_SystemLock
 
-.rodata         0x9d00679c       0x48
- .rodata        0x9d00679c       0x48 build/configRover/production/_ext/369138285/system_tasks.o
+.rodata         0x9d0067b4       0x48
+ .rodata        0x9d0067b4       0x48 build/configRover/production/_ext/369138285/system_tasks.o
 
 .text._bootstrap_exception_handler
-                0x9d0067e4       0x48
+                0x9d0067fc       0x48
  .text._bootstrap_exception_handler
-                0x9d0067e4       0x48 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
-                0x9d0067e4                _bootstrap_exception_handler
+                0x9d0067fc       0x48 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+                0x9d0067fc                _bootstrap_exception_handler
 
 .vector_default
-                0x9d00682c       0x48
+                0x9d006844       0x48
  .vector_default
-                0x9d00682c       0x48 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
-                0x9d00682c                _DefaultInterrupt
+                0x9d006844       0x48 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+                0x9d006844                _DefaultInterrupt
 
 .text.uxListRemove
-                0x9d006874       0x44
+                0x9d00688c       0x44
  .text.uxListRemove
-                0x9d006874       0x44 build/configRover/production/_ext/1209819165/list.o
-                0x9d006874                uxListRemove
+                0x9d00688c       0x44 build/configRover/production/_ext/1209819165/list.o
+                0x9d00688c                uxListRemove
 
-.text           0x9d0068b8       0x44
- .text          0x9d0068b8       0x44 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/pic32_software_reset.o
-                0x9d0068b8                __pic32_software_reset
+.text           0x9d0068d0       0x44
+ .text          0x9d0068d0       0x44 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/pic32_software_reset.o
+                0x9d0068d0                __pic32_software_reset
 
 .text.SYS_PORTS_Initialize
-                0x9d0068fc       0x40
+                0x9d006914       0x40
  .text.SYS_PORTS_Initialize
-                0x9d0068fc       0x40 build/configRover/production/_ext/1926720346/sys_ports_static.o
-                0x9d0068fc                SYS_PORTS_Initialize
+                0x9d006914       0x40 build/configRover/production/_ext/1926720346/sys_ports_static.o
+                0x9d006914                SYS_PORTS_Initialize
 
 .text._general_exception_handler
-                0x9d00693c       0x40
+                0x9d006954       0x40
  .text._general_exception_handler
-                0x9d00693c       0x40 build/configRover/production/_ext/369138285/system_exceptions.o
-                0x9d00693c                _general_exception_handler
+                0x9d006954       0x40 build/configRover/production/_ext/369138285/system_exceptions.o
+                0x9d006954                _general_exception_handler
 
 .text.uxPortSetInterruptMaskFromISR
-                0x9d00697c       0x3c
+                0x9d006994       0x3c
  .text.uxPortSetInterruptMaskFromISR
-                0x9d00697c       0x3c build/configRover/production/_ext/432427763/port.o
-                0x9d00697c                uxPortSetInterruptMaskFromISR
-
-.text.communication_sendmsgISR
-                0x9d0069b8       0x38
- .text.communication_sendmsgISR
-                0x9d0069b8       0x38 build/configRover/production/_ext/1360937237/communication.o
-                0x9d0069b8                communication_sendmsgISR
-
-.text.sensorcommunication_sendmsgISR
-                0x9d0069f0       0x38
- .text.sensorcommunication_sendmsgISR
-                0x9d0069f0       0x38 build/configRover/production/_ext/1360937237/sensorCommunication.o
-                0x9d0069f0                sensorcommunication_sendmsgISR
-
-.text.debugUInt
-                0x9d006a28       0x38
- .text.debugUInt
-                0x9d006a28       0x38 build/configRover/production/_ext/1536116519/debug.o
-                0x9d006a28                debugUInt
-
-.text.prvResetNextTaskUnblockTime
-                0x9d006a60       0x38
- .text.prvResetNextTaskUnblockTime
-                0x9d006a60       0x38 build/configRover/production/_ext/1209819165/tasks.o
-
-.text.crash     0x9d006a98       0x34
- .text.crash    0x9d006a98       0x34 build/configRover/production/_ext/1536116519/debug.o
-                0x9d006a98                crash
-
-.text.vListInsertEnd
-                0x9d006acc       0x30
- .text.vListInsertEnd
-                0x9d006acc       0x30 build/configRover/production/_ext/1209819165/list.o
-                0x9d006acc                vListInsertEnd
-
-.text.DRV_USART1_ReadByte
-                0x9d006afc       0x30
- .text.DRV_USART1_ReadByte
-                0x9d006afc       0x30 build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d006afc                DRV_USART1_ReadByte
-
-.text.DRV_USART2_ReadByte
-                0x9d006b2c       0x30
- .text.DRV_USART2_ReadByte
-                0x9d006b2c       0x30 build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d006b2c                DRV_USART2_ReadByte
-
-.text.prvTaskExitError
-                0x9d006b5c       0x2c
- .text.prvTaskExitError
-                0x9d006b5c       0x2c build/configRover/production/_ext/432427763/port.o
-
-.text.DRV_USART0_WriteByte
-                0x9d006b88       0x2c
- .text.DRV_USART0_WriteByte
-                0x9d006b88       0x2c build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d006b88                DRV_USART0_WriteByte
-
-.text.DRV_USART1_WriteByte
-                0x9d006bb4       0x2c
- .text.DRV_USART1_WriteByte
-                0x9d006bb4       0x2c build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d006bb4                DRV_USART1_WriteByte
-
-.text.DRV_USART2_WriteByte
-                0x9d006be0       0x2c
- .text.DRV_USART2_WriteByte
-                0x9d006be0       0x2c build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d006be0                DRV_USART2_WriteByte
-
-.text.vApplicationStackOverflowHook
-                0x9d006c0c       0x2c
- .text.vApplicationStackOverflowHook
-                0x9d006c0c       0x2c build/configRover/production/_ext/369138285/rtos_hooks.o
-                0x9d006c0c                vApplicationStackOverflowHook
-
-.text.vApplicationMallocFailedHook
-                0x9d006c38       0x2c
- .text.vApplicationMallocFailedHook
-                0x9d006c38       0x2c build/configRover/production/_ext/369138285/rtos_hooks.o
-                0x9d006c38                vApplicationMallocFailedHook
-
-.text.communication_IntQueueEmptyISR
-                0x9d006c64       0x28
- .text.communication_IntQueueEmptyISR
-                0x9d006c64       0x28 build/configRover/production/_ext/1360937237/communication.o
-                0x9d006c64                communication_IntQueueEmptyISR
-
-.text.sensorcommunication_sensorIntQueueEmptyISR
-                0x9d006c8c       0x28
- .text.sensorcommunication_sensorIntQueueEmptyISR
-                0x9d006c8c       0x28 build/configRover/production/_ext/1360937237/sensorCommunication.o
-                0x9d006c8c                sensorcommunication_sensorIntQueueEmptyISR
-
-.text.pvTaskIncrementMutexHeldCount
-                0x9d006cb4       0x28
- .text.pvTaskIncrementMutexHeldCount
-                0x9d006cb4       0x28 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006cb4                pvTaskIncrementMutexHeldCount
-
-.text.IntHandlerDrvUsartInstance0
-                0x9d006cdc       0x28
- .text.IntHandlerDrvUsartInstance0
-                0x9d006cdc       0x28 build/configRover/production/_ext/369138285/system_interrupt.o
-                0x9d006cdc                IntHandlerDrvUsartInstance0
-
-.rodata         0x9d006d04       0x48
- .rodata        0x9d006d04       0x24 build/configRover/production/_ext/1360937237/motor.o
- .rodata        0x9d006d28       0x24 build/configRover/production/_ext/1360937237/timer.o
-
-.text.main      0x9d006d4c       0x20
- .text.main     0x9d006d4c       0x20 build/configRover/production/_ext/1360937237/main.o
-                0x9d006d4c                main
-
-.text.vListInitialise
-                0x9d006d6c       0x20
- .text.vListInitialise
-                0x9d006d6c       0x20 build/configRover/production/_ext/1209819165/list.o
-                0x9d006d6c                vListInitialise
-
-.text.xTaskGetSchedulerState
-                0x9d006d8c       0x20
- .text.xTaskGetSchedulerState
-                0x9d006d8c       0x20 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006d8c                xTaskGetSchedulerState
-
-.text._SYS_Tasks
-                0x9d006dac       0x20
- .text._SYS_Tasks
-                0x9d006dac       0x20 build/configRover/production/_ext/369138285/system_tasks.o
-
-.text._COMMUNICATION_Tasks
-                0x9d006dcc       0x20
- .text._COMMUNICATION_Tasks
-                0x9d006dcc       0x20 build/configRover/production/_ext/369138285/system_tasks.o
-
-.text._MOTOR_Tasks
-                0x9d006dec       0x20
- .text._MOTOR_Tasks
-                0x9d006dec       0x20 build/configRover/production/_ext/369138285/system_tasks.o
-
-.text._SENSORCOMMUNICATION_Tasks
-                0x9d006e0c       0x20
- .text._SENSORCOMMUNICATION_Tasks
-                0x9d006e0c       0x20 build/configRover/production/_ext/369138285/system_tasks.o
-
-.text.initDebugU
-                0x9d006e2c       0x1c
- .text.initDebugU
-                0x9d006e2c       0x1c build/configRover/production/_ext/1536116519/debug.o
-                0x9d006e2c                initDebugU
-
-.text.theTimerCallback
-                0x9d006e48       0x1c
- .text.theTimerCallback
-                0x9d006e48       0x1c build/configRover/production/_ext/1360937237/timer.o
-                0x9d006e48                theTimerCallback
-
-.text.SYS_DEVCON_JTAGDisable
-                0x9d006e64       0x1c
- .text.SYS_DEVCON_JTAGDisable
-                0x9d006e64       0x1c build/configRover/production/_ext/1044950436/sys_devcon.o
-                0x9d006e64                SYS_DEVCON_JTAGDisable
-
-.rodata         0x9d006e80       0x1c
- .rodata        0x9d006e80       0x1c build/configRover/production/_ext/1209819165/tasks.o
-
-.text.vPortClearInterruptMaskFromISR
-                0x9d006e9c       0x1c
- .text.vPortClearInterruptMaskFromISR
-                0x9d006e9c       0x1c build/configRover/production/_ext/432427763/port.o
-                0x9d006e9c                vPortClearInterruptMaskFromISR
-
-.text.SYS_INT_Initialize
-                0x9d006eb8       0x18
- .text.SYS_INT_Initialize
-                0x9d006eb8       0x18 build/configRover/production/_ext/443798654/sys_int_pic32.o
-                0x9d006eb8                SYS_INT_Initialize
+                0x9d006994       0x3c build/configRover/production/_ext/432427763/port.o
+                0x9d006994                uxPortSetInterruptMaskFromISR
 
 .text.IntHandlerDrvTmrInstance0
-                0x9d006ed0       0x18
+                0x9d0069d0       0x3c
  .text.IntHandlerDrvTmrInstance0
-                0x9d006ed0       0x18 build/configRover/production/_ext/369138285/system_interrupt.o
-                0x9d006ed0                IntHandlerDrvTmrInstance0
+                0x9d0069d0       0x3c build/configRover/production/_ext/369138285/system_interrupt.o
+                0x9d0069d0                IntHandlerDrvTmrInstance0
 
-.rodata         0x9d006ee8       0x18
- .rodata        0x9d006ee8       0x18 build/configRover/production/_ext/369138285/system_interrupt.o
+.text.communication_sendmsgISR
+                0x9d006a0c       0x38
+ .text.communication_sendmsgISR
+                0x9d006a0c       0x38 build/configRover/production/_ext/1360937237/communication.o
+                0x9d006a0c                communication_sendmsgISR
 
-.text           0x9d006f00       0x18
- .text          0x9d006f00       0x18 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-nmi-handler.o)
-                0x9d006f00                _nmi_handler
+.text.sensorcommunication_sendmsgISR
+                0x9d006a44       0x38
+ .text.sensorcommunication_sendmsgISR
+                0x9d006a44       0x38 build/configRover/production/_ext/1360937237/sensorCommunication.o
+                0x9d006a44                sensorcommunication_sendmsgISR
+
+.text.debugUInt
+                0x9d006a7c       0x38
+ .text.debugUInt
+                0x9d006a7c       0x38 build/configRover/production/_ext/1536116519/debug.o
+                0x9d006a7c                debugUInt
+
+.text.prvResetNextTaskUnblockTime
+                0x9d006ab4       0x38
+ .text.prvResetNextTaskUnblockTime
+                0x9d006ab4       0x38 build/configRover/production/_ext/1209819165/tasks.o
+
+.text.crash     0x9d006aec       0x34
+ .text.crash    0x9d006aec       0x34 build/configRover/production/_ext/1536116519/debug.o
+                0x9d006aec                crash
+
+.text.debugTimerInit
+                0x9d006b20       0x34
+ .text.debugTimerInit
+                0x9d006b20       0x34 build/configRover/production/_ext/1536116519/debug.o
+                0x9d006b20                debugTimerInit
+
+.text.sensor_debugTimerInit
+                0x9d006b54       0x34
+ .text.sensor_debugTimerInit
+                0x9d006b54       0x34 build/configRover/production/_ext/1536116519/debug.o
+                0x9d006b54                sensor_debugTimerInit
+
+.text.vListInsertEnd
+                0x9d006b88       0x30
+ .text.vListInsertEnd
+                0x9d006b88       0x30 build/configRover/production/_ext/1209819165/list.o
+                0x9d006b88                vListInsertEnd
+
+.text.DRV_USART1_ReadByte
+                0x9d006bb8       0x30
+ .text.DRV_USART1_ReadByte
+                0x9d006bb8       0x30 build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d006bb8                DRV_USART1_ReadByte
+
+.text.DRV_USART2_ReadByte
+                0x9d006be8       0x30
+ .text.DRV_USART2_ReadByte
+                0x9d006be8       0x30 build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d006be8                DRV_USART2_ReadByte
+
+.text.prvTaskExitError
+                0x9d006c18       0x2c
+ .text.prvTaskExitError
+                0x9d006c18       0x2c build/configRover/production/_ext/432427763/port.o
+
+.text.DRV_USART0_WriteByte
+                0x9d006c44       0x2c
+ .text.DRV_USART0_WriteByte
+                0x9d006c44       0x2c build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d006c44                DRV_USART0_WriteByte
+
+.text.DRV_USART1_WriteByte
+                0x9d006c70       0x2c
+ .text.DRV_USART1_WriteByte
+                0x9d006c70       0x2c build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d006c70                DRV_USART1_WriteByte
+
+.text.DRV_USART2_WriteByte
+                0x9d006c9c       0x2c
+ .text.DRV_USART2_WriteByte
+                0x9d006c9c       0x2c build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d006c9c                DRV_USART2_WriteByte
+
+.text.vApplicationStackOverflowHook
+                0x9d006cc8       0x2c
+ .text.vApplicationStackOverflowHook
+                0x9d006cc8       0x2c build/configRover/production/_ext/369138285/rtos_hooks.o
+                0x9d006cc8                vApplicationStackOverflowHook
+
+.text.vApplicationMallocFailedHook
+                0x9d006cf4       0x2c
+ .text.vApplicationMallocFailedHook
+                0x9d006cf4       0x2c build/configRover/production/_ext/369138285/rtos_hooks.o
+                0x9d006cf4                vApplicationMallocFailedHook
+
+.text.communication_IntQueueEmptyISR
+                0x9d006d20       0x28
+ .text.communication_IntQueueEmptyISR
+                0x9d006d20       0x28 build/configRover/production/_ext/1360937237/communication.o
+                0x9d006d20                communication_IntQueueEmptyISR
+
+.text.sensorcommunication_sensorIntQueueEmptyISR
+                0x9d006d48       0x28
+ .text.sensorcommunication_sensorIntQueueEmptyISR
+                0x9d006d48       0x28 build/configRover/production/_ext/1360937237/sensorCommunication.o
+                0x9d006d48                sensorcommunication_sensorIntQueueEmptyISR
+
+.text.pvTaskIncrementMutexHeldCount
+                0x9d006d70       0x28
+ .text.pvTaskIncrementMutexHeldCount
+                0x9d006d70       0x28 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d006d70                pvTaskIncrementMutexHeldCount
+
+.text.IntHandlerDrvUsartInstance0
+                0x9d006d98       0x28
+ .text.IntHandlerDrvUsartInstance0
+                0x9d006d98       0x28 build/configRover/production/_ext/369138285/system_interrupt.o
+                0x9d006d98                IntHandlerDrvUsartInstance0
+
+.rodata         0x9d006dc0       0x48
+ .rodata        0x9d006dc0       0x24 build/configRover/production/_ext/1360937237/motor.o
+ .rodata        0x9d006de4       0x24 build/configRover/production/_ext/1360937237/timer.o
+
+.text.main      0x9d006e08       0x20
+ .text.main     0x9d006e08       0x20 build/configRover/production/_ext/1360937237/main.o
+                0x9d006e08                main
+
+.text.vListInitialise
+                0x9d006e28       0x20
+ .text.vListInitialise
+                0x9d006e28       0x20 build/configRover/production/_ext/1209819165/list.o
+                0x9d006e28                vListInitialise
+
+.text.xTaskGetSchedulerState
+                0x9d006e48       0x20
+ .text.xTaskGetSchedulerState
+                0x9d006e48       0x20 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d006e48                xTaskGetSchedulerState
+
+.text._SYS_Tasks
+                0x9d006e68       0x20
+ .text._SYS_Tasks
+                0x9d006e68       0x20 build/configRover/production/_ext/369138285/system_tasks.o
+
+.text._COMMUNICATION_Tasks
+                0x9d006e88       0x20
+ .text._COMMUNICATION_Tasks
+                0x9d006e88       0x20 build/configRover/production/_ext/369138285/system_tasks.o
+
+.text._MOTOR_Tasks
+                0x9d006ea8       0x20
+ .text._MOTOR_Tasks
+                0x9d006ea8       0x20 build/configRover/production/_ext/369138285/system_tasks.o
+
+.text._SENSORCOMMUNICATION_Tasks
+                0x9d006ec8       0x20
+ .text._SENSORCOMMUNICATION_Tasks
+                0x9d006ec8       0x20 build/configRover/production/_ext/369138285/system_tasks.o
+
+.text.initDebugU
+                0x9d006ee8       0x1c
+ .text.initDebugU
+                0x9d006ee8       0x1c build/configRover/production/_ext/1536116519/debug.o
+                0x9d006ee8                initDebugU
+
+.text.theTimerCallback
+                0x9d006f04       0x1c
+ .text.theTimerCallback
+                0x9d006f04       0x1c build/configRover/production/_ext/1360937237/timer.o
+                0x9d006f04                theTimerCallback
+
+.text.SYS_DEVCON_JTAGDisable
+                0x9d006f20       0x1c
+ .text.SYS_DEVCON_JTAGDisable
+                0x9d006f20       0x1c build/configRover/production/_ext/1044950436/sys_devcon.o
+                0x9d006f20                SYS_DEVCON_JTAGDisable
+
+.rodata         0x9d006f3c       0x1c
+ .rodata        0x9d006f3c       0x1c build/configRover/production/_ext/1209819165/tasks.o
+
+.text.vPortClearInterruptMaskFromISR
+                0x9d006f58       0x1c
+ .text.vPortClearInterruptMaskFromISR
+                0x9d006f58       0x1c build/configRover/production/_ext/432427763/port.o
+                0x9d006f58                vPortClearInterruptMaskFromISR
+
+.text.SYS_INT_Initialize
+                0x9d006f74       0x18
+ .text.SYS_INT_Initialize
+                0x9d006f74       0x18 build/configRover/production/_ext/443798654/sys_int_pic32.o
+                0x9d006f74                SYS_INT_Initialize
+
+.text.DRV_TMR0_Start
+                0x9d006f8c       0x18
+ .text.DRV_TMR0_Start
+                0x9d006f8c       0x18 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+                0x9d006f8c                DRV_TMR0_Start
+
+.rodata         0x9d006fa4       0x18
+ .rodata        0x9d006fa4       0x18 build/configRover/production/_ext/369138285/system_interrupt.o
+
+.text           0x9d006fbc       0x18
+ .text          0x9d006fbc       0x18 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-nmi-handler.o)
+                0x9d006fbc                _nmi_handler
 
 .text.SYS_DEVCON_Initialize
-                0x9d006f18       0x14
+                0x9d006fd4       0x14
  .text.SYS_DEVCON_Initialize
-                0x9d006f18       0x14 build/configRover/production/_ext/1044950436/sys_devcon.o
-                0x9d006f18                SYS_DEVCON_Initialize
+                0x9d006fd4       0x14 build/configRover/production/_ext/1044950436/sys_devcon.o
+                0x9d006fd4                SYS_DEVCON_Initialize
 
 .text.vTaskSuspendAll
-                0x9d006f2c       0x14
+                0x9d006fe8       0x14
  .text.vTaskSuspendAll
-                0x9d006f2c       0x14 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006f2c                vTaskSuspendAll
+                0x9d006fe8       0x14 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d006fe8                vTaskSuspendAll
 
 .text.vTaskSetTimeOutState
-                0x9d006f40       0x14
+                0x9d006ffc       0x14
  .text.vTaskSetTimeOutState
-                0x9d006f40       0x14 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006f40                vTaskSetTimeOutState
+                0x9d006ffc       0x14 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d006ffc                vTaskSetTimeOutState
 
 .text.DRV_USART1_ReceiverBufferIsEmpty
-                0x9d006f54       0x14
+                0x9d007010       0x14
  .text.DRV_USART1_ReceiverBufferIsEmpty
-                0x9d006f54       0x14 build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d006f54                DRV_USART1_ReceiverBufferIsEmpty
+                0x9d007010       0x14 build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d007010                DRV_USART1_ReceiverBufferIsEmpty
 
 .text.DRV_USART2_ReceiverBufferIsEmpty
-                0x9d006f68       0x14
+                0x9d007024       0x14
  .text.DRV_USART2_ReceiverBufferIsEmpty
-                0x9d006f68       0x14 build/configRover/production/_ext/1532176561/drv_usart_static.o
-                0x9d006f68                DRV_USART2_ReceiverBufferIsEmpty
+                0x9d007024       0x14 build/configRover/production/_ext/1532176561/drv_usart_static.o
+                0x9d007024                DRV_USART2_ReceiverBufferIsEmpty
 
-.rodata         0x9d006f7c       0x10
- .rodata        0x9d006f7c       0x10 build/configRover/production/_ext/1536116519/debug.o
+.rodata         0x9d007038       0x10
+ .rodata        0x9d007038       0x10 build/configRover/production/_ext/1536116519/debug.o
+
+.text.debugTimerTick
+                0x9d007048       0x10
+ .text.debugTimerTick
+                0x9d007048       0x10 build/configRover/production/_ext/1536116519/debug.o
+                0x9d007048                debugTimerTick
+
+.text.debugGetTime
+                0x9d007058       0x10
+ .text.debugGetTime
+                0x9d007058       0x10 build/configRover/production/_ext/1536116519/debug.o
+                0x9d007058                debugGetTime
+
+.text.sensor_debugTimerTick
+                0x9d007068       0x10
+ .text.sensor_debugTimerTick
+                0x9d007068       0x10 build/configRover/production/_ext/1536116519/debug.o
+                0x9d007068                sensor_debugTimerTick
+
+.text.sensor_debugGetTime
+                0x9d007078       0x10
+ .text.sensor_debugGetTime
+                0x9d007078       0x10 build/configRover/production/_ext/1536116519/debug.o
+                0x9d007078                sensor_debugGetTime
 
 .text.vTaskMissedYield
-                0x9d006f8c       0x10
+                0x9d007088       0x10
  .text.vTaskMissedYield
-                0x9d006f8c       0x10 build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006f8c                vTaskMissedYield
+                0x9d007088       0x10 build/configRover/production/_ext/1209819165/tasks.o
+                0x9d007088                vTaskMissedYield
+
+.text.DRV_TMR0_CounterClear
+                0x9d007098       0x10
+ .text.DRV_TMR0_CounterClear
+                0x9d007098       0x10 build/configRover/production/_ext/1797679462/drv_tmr_static.o
+                0x9d007098                DRV_TMR0_CounterClear
 
 .text.xQueueIsQueueEmptyFromISR
-                0x9d006f9c        0xc
+                0x9d0070a8        0xc
  .text.xQueueIsQueueEmptyFromISR
-                0x9d006f9c        0xc build/configRover/production/_ext/1209819165/queue.o
-                0x9d006f9c                xQueueIsQueueEmptyFromISR
+                0x9d0070a8        0xc build/configRover/production/_ext/1209819165/queue.o
+                0x9d0070a8                xQueueIsQueueEmptyFromISR
 
 .text.xTaskGetTickCount
-                0x9d006fa8        0xc
+                0x9d0070b4        0xc
  .text.xTaskGetTickCount
-                0x9d006fa8        0xc build/configRover/production/_ext/1209819165/tasks.o
-                0x9d006fa8                xTaskGetTickCount
+                0x9d0070b4        0xc build/configRover/production/_ext/1209819165/tasks.o
+                0x9d0070b4                xTaskGetTickCount
 
 .text.SYS_CLK_SystemFrequencyGet
-                0x9d006fb4        0xc
+                0x9d0070c0        0xc
  .text.SYS_CLK_SystemFrequencyGet
-                0x9d006fb4        0xc build/configRover/production/_ext/249367850/sys_clk_static.o
-                0x9d006fb4                SYS_CLK_SystemFrequencyGet
+                0x9d0070c0        0xc build/configRover/production/_ext/249367850/sys_clk_static.o
+                0x9d0070c0                SYS_CLK_SystemFrequencyGet
 
 .text.SYS_CLK_PeripheralFrequencyGet
-                0x9d006fc0        0xc
+                0x9d0070cc        0xc
  .text.SYS_CLK_PeripheralFrequencyGet
-                0x9d006fc0        0xc build/configRover/production/_ext/249367850/sys_clk_static.o
-                0x9d006fc0                SYS_CLK_PeripheralFrequencyGet
+                0x9d0070cc        0xc build/configRover/production/_ext/249367850/sys_clk_static.o
+                0x9d0070cc                SYS_CLK_PeripheralFrequencyGet
 
 .text.SYS_DEVCON_Tasks
-                0x9d006fcc        0x8
+                0x9d0070d8        0x8
  .text.SYS_DEVCON_Tasks
-                0x9d006fcc        0x8 build/configRover/production/_ext/1044950436/sys_devcon.o
-                0x9d006fcc                SYS_DEVCON_Tasks
+                0x9d0070d8        0x8 build/configRover/production/_ext/1044950436/sys_devcon.o
+                0x9d0070d8                SYS_DEVCON_Tasks
 
 .text.vListInitialiseItem
-                0x9d006fd4        0x8
+                0x9d0070e0        0x8
  .text.vListInitialiseItem
-                0x9d006fd4        0x8 build/configRover/production/_ext/1209819165/list.o
-                0x9d006fd4                vListInitialiseItem
+                0x9d0070e0        0x8 build/configRover/production/_ext/1209819165/list.o
+                0x9d0070e0                vListInitialiseItem
 
-.rodata         0x9d006fdc        0x8
- .rodata        0x9d006fdc        0x8 build/configRover/production/_ext/1209819165/timers.o
+.rodata         0x9d0070e8        0x8
+ .rodata        0x9d0070e8        0x8 build/configRover/production/_ext/1209819165/timers.o
 
 .text.vPortFree
-                0x9d006fe4        0x8
+                0x9d0070f0        0x8
  .text.vPortFree
-                0x9d006fe4        0x8 build/configRover/production/_ext/1343652704/heap_1.o
-                0x9d006fe4                vPortFree
+                0x9d0070f0        0x8 build/configRover/production/_ext/1343652704/heap_1.o
+                0x9d0070f0                vPortFree
 
 .text._on_reset
-                0x9d006fec        0x8
+                0x9d0070f8        0x8
  .text._on_reset
-                0x9d006fec        0x8 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
-                0x9d006fec                _on_reset
+                0x9d0070f8        0x8 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+                0x9d0070f8                _on_reset
 
 .text._on_bootstrap
-                0x9d006ff4        0x8
+                0x9d007100        0x8
  .text._on_bootstrap
-                0x9d006ff4        0x8 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
-                0x9d006ff4                _on_bootstrap
+                0x9d007100        0x8 /Applications/microchip/xc32/v1.40/bin/bin/../../lib/gcc/pic32mx/4.8.3/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+                0x9d007100                _on_bootstrap
 
-.rodata         0x9d006ffc        0x8
- .rodata        0x9d006ffc        0x4 build/configRover/production/_ext/432427763/port.o
-                0x9d006ffc                xISRStackTop
- .rodata        0x9d007000        0x4 build/configRover/production/_ext/369138285/system_init.o
-                0x9d007000                sysDevconInit
+.rodata         0x9d004e4c        0x4
+ .rodata        0x9d004e4c        0x4 build/configRover/production/_ext/432427763/port.o
+                0x9d004e4c                xISRStackTop
+
+.rodata         0x9d007108        0x4
+ .rodata        0x9d007108        0x4 build/configRover/production/_ext/369138285/system_init.o
+                0x9d007108                sysDevconInit

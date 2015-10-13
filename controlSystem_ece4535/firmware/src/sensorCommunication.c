@@ -293,6 +293,7 @@ void SENSORCOMMUNICATION_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
 	//initDebugU();
+    sensor_debugTimerInit();
     sensorcommunicationData.state = SENSORCOMMUNICATION_STATE_INIT;
 	sensorcommunicationData.sensorrxByteCount = 0;
 	sensorcommunicationData.sensorTxMsgSeq = 0x00;
@@ -375,7 +376,7 @@ void SENSORCOMMUNICATION_Tasks ( void )
 										i++;
 										if(i == 10)
 										{
-											crash("E: COM too many lost rx seqnum");
+											crash("E: COM too many lost rx seqnum\n");
 										}
 									}
 									int x = 0;
@@ -389,13 +390,22 @@ void SENSORCOMMUNICATION_Tasks ( void )
 									y += CharToInt(sensorcommunicationData.sensorrxBuffer[8]) * 10;
 									y += CharToInt(sensorcommunicationData.sensorrxBuffer[9]);
 
-									debugU("Sensor1:");
-									char msg[12];
-									sprintf(msg, "%d", x);
-									debugU(msg);
-									debugU("Sensor2:");
-									sprintf(msg, "%d", y);
-									debugU(msg);
+                                    communication_sendIntMsg(x, y);
+                                    
+                                    debugU("sensor msg period: ");
+                                    debugUInt(sensor_debugGetTime());
+                                    
+									debugU("Sensor1: ");
+									//char msg[12];
+									//sprintf(msg, "%d", x);
+									//debugU(msg);
+                                    debugUInt(x);
+									debugU("Sensor2: ");
+									//sprintf(msg, "%d", y);
+									//debugU(msg);
+                                    debugUInt(y);
+                                    
+                                    debugU("\n");
                                     
                                     //communication_sendIntMsg(x,y);
                                     
@@ -404,7 +414,7 @@ void SENSORCOMMUNICATION_Tasks ( void )
 									if(sensorcommunicationData.sensorRxMsgSeq == 0x7F)
                                         sensorcommunicationData.sensorRxMsgSeq = 0x00;
 									//ACK
-									debugU("\nsensor comm ACK\n");
+									//debugU("\nsensor comm ACK\n");
 //#ifdef TEST
 //                                    testData.count++; // Increment message count
 //                                    int j =0;

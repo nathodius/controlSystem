@@ -1,5 +1,8 @@
 #include "debug.h"
-
+int lastTime;
+int msTime;
+int sensor_lastTime;
+int sensor_msTime;
 
 ///*
 void debugCharInit()
@@ -51,4 +54,48 @@ void crash(char* debugMessage)
 {
 	debugU("CRASHED: ");
 	debugU(debugMessage);
+}
+
+void debugTimerInit()
+{
+	DRV_TMR0_Initialize();	
+	DRV_TMR0_CounterClear();
+	DRV_TMR0_Start();
+	lastTime = 0;
+	msTime = 0;
+}
+
+void debugTimerTick()
+{
+	msTime++;
+}
+
+
+int debugGetTime()
+{
+	lastTime = msTime;
+	msTime = 0;
+	return lastTime;
+}
+
+void sensor_debugTimerInit()
+{
+	DRV_TMR0_Initialize();	
+	DRV_TMR0_CounterClear();
+	DRV_TMR0_Start();
+	sensor_lastTime = 0;
+	sensor_msTime = 0;
+}
+
+void sensor_debugTimerTick()
+{
+	sensor_msTime++;
+}
+
+
+int sensor_debugGetTime()
+{
+	sensor_lastTime = sensor_msTime;
+	sensor_msTime = 0;
+	return sensor_lastTime;
 }

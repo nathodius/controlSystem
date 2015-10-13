@@ -1,7 +1,7 @@
 
 #include "communication.h"
 
-#define COMMUNICATIONQUEUESIZE 15
+#define COMMUNICATIONQUEUESIZE 30
 #define STARTBYTE 0x80
 COMMUNICATION_DATA communicationData;
 COMMUNICATION_TEST testData;
@@ -137,7 +137,7 @@ void communication_sendIntMsg(int left, int right)
 	if(communicationData.TxMsgSeq == 0x7F)
 		communicationData.TxMsgSeq = 0x00;
 	PLIB_INT_SourceEnable(INT_ID_0, INT_SOURCE_USART_4_TRANSMIT);	//ENABLE TX INTERRUPT
-    debugU("\ntransmitting...\n");
+    //debugU("\ntransmitting...\n");
 }
 
 unsigned char communication_getByteISR()
@@ -255,6 +255,7 @@ void communication_UartTxChar( char theChar )
 void COMMUNICATION_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
+    debugTimerInit();
     communicationData.state = COMMUNICATION_STATE_INIT;
 	communicationData.rxByteCount = 0;
 	communicationData.TxMsgSeq = 0x00;
@@ -298,13 +299,15 @@ void COMMUNICATION_Tasks ( void )
 						break;
 
 					case COMMUNICATION_STATE_RECEIVE:	//1
+                        //debugU("RECEIVE FROM ROVER\n");
+                        //debugU("------------------\n");
 						//debugU("receive from rover");
 						//debugUInt(communicationData.rxMessage.msg);
 						if(communicationData.rxMessage.msg == STARTBYTE)	//received start transmit bit
 						{
 							if(communicationData.rxByteCount > 0)	//we had part of a previous message...
 							{
-								debugU("rover NACK");
+								debugU("mixed messages from rover\n");
 								//NACK;
                                 communicationData.rxByteCount = 0;
 							}
@@ -325,11 +328,12 @@ void COMMUNICATION_Tasks ( void )
 									while(communicationData.rxBuffer[1] != communicationData.RxMsgSeq)
 									{
 										communicationData.RxMsgSeq++;
-										debugU("Lost a seq number\r");
+										debugU("rover: Lost a seq number \t");
+                                        debugUInt(communicationData.RxMsgSeq);
 										i++;
 										if(i == 10)
 										{
-											crash("E: COM too many lost rx seqnum");
+											crash("E: COM too many lost rx seqnum\n");
 										}
 									}
 									int command = 0;
@@ -343,28 +347,32 @@ void COMMUNICATION_Tasks ( void )
 									duration += CharToInt(communicationData.rxBuffer[8]) * 10;
 									duration += CharToInt(communicationData.rxBuffer[9]);
                                     
-                                    int delay = 0;
-                                    while(delay != 100000000)
-                                    {
-                                        delay++;
-                                    }
-                                    communication_sendIntMsg(65, 65);
+//                                    int delay = 0;
+//                                    while(delay != 100000000)
+//                                    {
+//                                        delay++;
+//                                    }
+                                    debugU("rover msg period: ");
+                                    debugUInt(debugGetTime());
 
-									debugU("Rover1:");
+									debugU("Rover1 data: ");
 									//char msg[12];
 									//sprintf(msg, "%d", command);
 									debugUInt(command);
                                     
-									debugU("Rover2:");
+									debugU("Rover2 data: ");
 									//sprintf(msg, "%d", duration);
 									debugUInt(duration);
+                                    
+                                    debugU("\n");
+                                    
 									communicationData.rxByteCount = 0;
 									communicationData.RxMsgSeq++;
 									if(communicationData.RxMsgSeq == 0x7F)
                                         communicationData.RxMsgSeq = 0x00;
 									//ACK
                                     PLIB_PORTS_PinToggle(PORTS_ID_0, PORT_CHANNEL_E, 0);
-									debugU("\nACK comm\n");
+									//debugU("\nACK comm\n");
                                   
 //#ifdef TEST
 //                                    testData.count++; // Increment message count

@@ -76,10 +76,19 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 void IntHandlerDrvTmrInstance0(void)
 
 {
-
+    debugTimerTick();
+    sensor_debugTimerTick();
+    PLIB_TMR_Counter16BitClear(TMR_ID_5);
     PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_5);
-
 }
+ 
+//IntHandlerDrvTmrInstance1(void)
+//
+//{
+//    sensor_debugTimerTick();
+//    PLIB_TMR_Counter16BitClear(TMR_ID_4);
+//    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_4);
+//}
  
 void IntHandlerDrvUsartInstance0(void)
 {

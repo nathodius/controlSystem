@@ -185,7 +185,8 @@ build/configRover/production/_ext/1360937237/motor.o:  \
 ../src/motor.h  \
  ../src/sensorcommunication.h  \
 ../src/sensorcommunication_public.h  \
- ../src/motor_public.h  \
+ ../src/control.h  \
+../src/motor_public.h  \
  ../../../../microchip/harmony/v1_06/framework/peripheral/oc/plib_oc.h  \
  ../../../../microchip/harmony/v1_06/framework/peripheral/oc/processor/oc_processor.h  \
  ../../../../microchip/harmony/v1_06/framework/peripheral/oc/processor/oc_p32xxxx.h  \

@@ -186,4 +186,5 @@ build/configRover/production/_ext/369138285/system_init.o:  \
 ../src/motor.h  \
 ../src/motor_public.h  \
  ../src/sensorcommunication.h  \
-../src/sensorcommunication_public.h 
+../src/sensorcommunication_public.h  \
+ ../src/control.h 

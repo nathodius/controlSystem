@@ -187,4 +187,5 @@ build/configRover/production/_ext/369138285/system_exceptions.o:  \
 ../src/motor_public.h  \
  ../src/sensorcommunication.h  \
 ../src/sensorcommunication_public.h  \
+ ../src/control.h  \
  ../../../../microchip/harmony/v1_06/framework/system/debug/sys_debug.h 

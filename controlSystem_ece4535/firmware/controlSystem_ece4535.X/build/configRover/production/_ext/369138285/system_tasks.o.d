@@ -187,4 +187,5 @@ build/configRover/production/_ext/369138285/system_tasks.o:  \
 ../src/motor_public.h  \
  ../src/sensorcommunication.h  \
 ../src/sensorcommunication_public.h  \
- ../src/sensorCommunication.h 
+ ../src/control.h  \
+../src/sensorCommunication.h 

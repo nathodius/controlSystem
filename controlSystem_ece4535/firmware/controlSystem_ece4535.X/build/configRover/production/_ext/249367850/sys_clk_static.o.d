@@ -184,4 +184,5 @@ build/configRover/production/_ext/249367850/sys_clk_static.o:  \
 ../src/motor.h  \
 ../src/motor_public.h  \
  ../src/sensorcommunication.h  \
-../src/sensorcommunication_public.h 
+../src/sensorcommunication_public.h  \
+ ../src/control.h 

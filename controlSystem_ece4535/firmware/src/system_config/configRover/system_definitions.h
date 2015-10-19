@@ -69,6 +69,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "communication.h"
 #include "motor.h"
 #include "sensorcommunication.h"
+#include "control.h"
 
 
 // DOM-IGNORE-BEGIN

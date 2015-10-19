@@ -1,6 +1,7 @@
-build/configRover/debug/_ext/249367850/sys_clk_static.o:  \
- ../src/system_config/configRover/framework/system/clk/src/sys_clk_static.c  \
- ../src/system_config/configRover/system_config.h  \
+build/configRover/production/_ext/1360937237/control.o:  \
+../src/control.c  \
+ ../src/control.h  \
+../src/system_config/configRover/system_config.h  \
  ../src/system_config/configRover/system_definitions.h  \
  ../../../../microchip/harmony/v1_06/framework/system/common/sys_common.h  \
  ../../../../microchip/harmony/v1_06/framework/system/common/sys_module.h  \
@@ -184,4 +185,5 @@ build/configRover/debug/_ext/249367850/sys_clk_static.o:  \
 ../src/motor.h  \
 ../src/motor_public.h  \
  ../src/sensorcommunication.h  \
-../src/sensorcommunication_public.h 
+../src/sensorcommunication_public.h  \
+ ../src/control.h 

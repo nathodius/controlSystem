@@ -276,7 +276,7 @@ void COMMUNICATION_Initialize ( void )
 
 void COMMUNICATION_Tasks ( void )
 {
-    communication_sendIntMsg(65, 65);
+    //communication_sendIntMsg(65, 65);
 	while(1)
 	{      
 		//check if queue exists

@@ -69,6 +69,7 @@ static void _SYS_Tasks ( void );
 static void _COMMUNICATION_Tasks(void);
 static void _MOTOR_Tasks(void);
 static void _SENSORCOMMUNICATION_Tasks(void);
+static void _CONTROL_Tasks(void);
 
 
 // *****************************************************************************
@@ -105,6 +106,11 @@ void SYS_Tasks ( void )
     /* Create OS Thread for SENSORCOMMUNICATION Tasks. */
     xTaskCreate((TaskFunction_t) _SENSORCOMMUNICATION_Tasks,
                 "SENSORCOMMUNICATION Tasks",
+                1024, NULL, 1, NULL);
+
+    /* Create OS Thread for CONTROL Tasks. */
+    xTaskCreate((TaskFunction_t) _CONTROL_Tasks,
+                "CONTROL Tasks",
                 1024, NULL, 1, NULL);
 
     /**************
@@ -188,6 +194,24 @@ static void _SENSORCOMMUNICATION_Tasks(void)
     while(1)
     {
         SENSORCOMMUNICATION_Tasks();
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
+
+
+/*******************************************************************************
+  Function:
+    void _CONTROL_Tasks ( void )
+
+  Summary:
+    Maintains state machine of CONTROL.
+*/
+
+static void _CONTROL_Tasks(void)
+{
+    while(1)
+    {
+        CONTROL_Tasks();
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }

@@ -154,6 +154,10 @@
         <Checksum>2BD66D32C8969E6DFD005334A7875B02</Checksum>
       </Template>
       <Template>
+        <Name>control.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
         <Name>drv_usart_static.h</Name>
         <Path>Header Files/app/system_config/configRover/framework/driver/usart</Path>
         <Checksum>DC98C89236C4B46DAA5B0654EE3900C5</Checksum>
@@ -161,7 +165,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/configRover</Path>
-        <Checksum>9C0756F029439EC9354E12429D463E27</Checksum>
+        <Checksum>800B2B9917B622676B6558877F6D56C1</Checksum>
       </Template>
       <Template>
         <Name>sensorCommunication.c</Name>
@@ -169,6 +173,10 @@
       </Template>
       <Template>
         <Name>communication.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>control.c</Name>
         <Path>Source Files/app</Path>
       </Template>
       <Template>
@@ -199,7 +207,7 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/configRover</Path>
-        <Checksum>E1A0BD4E512E8B1CE91B3262D18B6B0E</Checksum>
+        <Checksum>EB406D7491734EA8DD7ABF92DC1408C0</Checksum>
       </Template>
       <Template>
         <Name>system_config.h</Name>
@@ -219,7 +227,7 @@
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/configRover</Path>
-        <Checksum>2A11EA7F50106852C9E375294A23691C</Checksum>
+        <Checksum>46029C1B24C1025D437FFEB80DF6043B</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.c</Name>
@@ -234,7 +242,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/configRover</Path>
-        <Checksum>25B19983A61980AEFDB17C52E0A70169</Checksum>
+        <Checksum>0AD87B94AD4A6F509C63385F4F9E6416</Checksum>
       </Template>
       <Template>
         <Name>motor.h</Name>

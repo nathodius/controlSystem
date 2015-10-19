@@ -112,6 +112,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+//<editor-fold defaultstate="collapsed" desc="DRV_Timer Initialization Data">
+
+// </editor-fold>
 //<editor-fold defaultstate="collapsed" desc="DRV_USART Initialization Data">
 
 // </editor-fold>
@@ -198,6 +201,7 @@ void SYS_Initialize ( void* data )
     COMMUNICATION_Initialize();
     MOTOR_Initialize();
     SENSORCOMMUNICATION_Initialize();
+    CONTROL_Initialize();
 }
 
 

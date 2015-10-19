@@ -185,4 +185,5 @@ build/configRover/production/_ext/1360937237/timer.o:  \
 ../src/motor.h  \
 ../src/motor_public.h  \
  ../src/sensorcommunication.h  \
-../src/sensorcommunication_public.h 
+../src/sensorcommunication_public.h  \
+ ../src/control.h 

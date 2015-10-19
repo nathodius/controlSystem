@@ -185,4 +185,5 @@ build/configRover/production/_ext/1536116519/debug.o:  \
 ../src/motor.h  \
 ../src/motor_public.h  \
  ../src/sensorcommunication.h  \
-../src/sensorcommunication_public.h 
+../src/sensorcommunication_public.h  \
+ ../src/control.h 

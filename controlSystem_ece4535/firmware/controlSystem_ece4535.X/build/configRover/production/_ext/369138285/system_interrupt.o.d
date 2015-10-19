@@ -184,5 +184,6 @@ build/configRover/production/_ext/369138285/system_interrupt.o:  \
  ../../../../microchip/harmony/v1_06/third_party/rtos/FreeRTOS/Source/include/timers.h  \
  ../../../../microchip/harmony/v1_06/third_party/rtos/FreeRTOS/Source/include/task.h  \
  ../src/sensorcommunication_public.h  \
-../src/communication_public.h  \
+../src/control.h  \
+ ../src/communication_public.h  \
  ../src/system_config/configRover/system_definitions.h 

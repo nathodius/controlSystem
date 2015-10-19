@@ -185,4 +185,5 @@ build/configRover/production/_ext/1360937237/communication.o:  \
  ../../../../microchip/harmony/v1_06/third_party/rtos/FreeRTOS/Source/include/timers.h  \
  ../../../../microchip/harmony/v1_06/third_party/rtos/FreeRTOS/Source/include/task.h  \
  ../src/sensorcommunication_public.h  \
-../src/communication_public.h 
+../src/control.h  \
+ ../src/communication_public.h 

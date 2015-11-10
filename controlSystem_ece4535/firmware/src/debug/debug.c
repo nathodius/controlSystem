@@ -36,7 +36,7 @@ void debugU(char* debugMessage)
 //	DRV_USART0_WriteByte('\r');
 }
 
-void debugUChar(char theChar)
+void debugUChar(unsigned char theChar)
 {
 	DRV_USART0_WriteByte(theChar);
 	DRV_USART0_WriteByte('\r');	

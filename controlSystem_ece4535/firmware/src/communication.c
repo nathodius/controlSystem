@@ -276,7 +276,7 @@ void COMMUNICATION_Initialize ( void )
 
 void COMMUNICATION_Tasks ( void )
 {
-    communication_sendIntMsg(65, 65);
+    //communication_sendIntMsg(65, 65);
 	while(1)
 	{      
 		//check if queue exists
@@ -327,7 +327,11 @@ void COMMUNICATION_Tasks ( void )
 									int i = 0;
 									while(communicationData.rxBuffer[1] != communicationData.RxMsgSeq)
 									{
-										communicationData.RxMsgSeq++;
+                                        if (communicationData.RxMsgSeq < 127)
+                                            communicationData.RxMsgSeq++;
+                                        else
+                                            communicationData.RxMsgSeq = 0;
+                                        
 										debugU("rover: Lost a seq number \t");
                                         debugUInt(communicationData.RxMsgSeq);
 										i++;

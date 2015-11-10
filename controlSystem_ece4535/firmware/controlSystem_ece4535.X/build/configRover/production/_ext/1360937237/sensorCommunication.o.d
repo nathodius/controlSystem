@@ -1,5 +1,6 @@
 build/configRover/production/_ext/1360937237/sensorCommunication.o:  \
  ../src/sensorCommunication.c  \
+../src/map.h  \
 ../src/sensorcommunication.h  \
  ../src/system_config/configRover/system_config.h  \
  ../src/system_config/configRover/system_definitions.h  \

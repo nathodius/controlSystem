@@ -3,14 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/nathanielhughes/microchip/harmony/v1_06/framework/peripheral/ports/templates/ports_AnPinsMode_Non_PPS.h</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/map.h</file>
             <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/sensorCommunication.c</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/debug/debug.h</file>
             <file>file:/Users/nathanielhughes/microchip/harmony/v1_06/third_party/rtos/FreeRTOS/Source/tasks.c</file>
-            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/communication.h</file>
-            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/system_config/configRover/system_interrupt.c</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/control.c</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/main.c</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/system_config/configRover/system_init.c</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/control.h</file>
             <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/communication.c</file>
             <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/debug/debug.c</file>
             <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/sensorCommunication.h</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/communication_public.h</file>
+            <file>file:/Users/nathanielhughes/controlSystem/controlSystem_ece4535/firmware/src/map.c</file>
         </group>
     </open-files>
 </project-private>

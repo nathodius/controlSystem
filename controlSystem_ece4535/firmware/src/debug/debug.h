@@ -32,7 +32,7 @@ extern "C" {
 	void debugU(char* debugMessage);
 	void crash(char* debugMessage);
 	void debugUInt(int number);
-	void debugUChar(char debugChar);
+	void debugUChar(unsigned char debugChar);
     void debugTimerInit();
     void debugTimerTick();
     int debugGetTime();

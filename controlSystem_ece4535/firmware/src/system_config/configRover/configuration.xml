@@ -15,16 +15,16 @@
         <Path>Header Files/FreeRTOS</Path>
       </File>
       <File>
-        <Name>projdefs.h</Name>
-        <Path>Header Files/FreeRTOS</Path>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
       </File>
       <File>
         <Name>list.c</Name>
         <Path>Source Files/FreeRTOS</Path>
       </File>
       <File>
-        <Name>sys_common.h</Name>
-        <Path>Header Files/framework/system/common</Path>
+        <Name>projdefs.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
       </File>
       <File>
         <Name>portable.h</Name>
@@ -39,16 +39,16 @@
         <Path>Source Files/framework/system/ports/src</Path>
       </File>
       <File>
-        <Name>ISR_Support.h</Name>
-        <Path>Header Files/FreeRTOS/portable/MPLAB/PIC32MX</Path>
+        <Name>tasks.c</Name>
+        <Path>Source Files/FreeRTOS</Path>
       </File>
       <File>
         <Name>port.c</Name>
         <Path>Source Files/FreeRTOS/portable/MPLAB/PIC32MX</Path>
       </File>
       <File>
-        <Name>tasks.c</Name>
-        <Path>Source Files/FreeRTOS</Path>
+        <Name>ISR_Support.h</Name>
+        <Path>Header Files/FreeRTOS/portable/MPLAB/PIC32MX</Path>
       </File>
       <File>
         <Name>event_groups.c</Name>
@@ -123,12 +123,12 @@
         <Path>Source Files/FreeRTOS/portable/MemMang</Path>
       </File>
       <File>
-        <Name>FreeRTOS.h</Name>
-        <Path>Header Files/FreeRTOS</Path>
-      </File>
-      <File>
         <Name>sys_int_pic32.c</Name>
         <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>FreeRTOS.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
       </File>
       <File>
         <Name>sys_devcon_pic32mx.c</Name>
@@ -197,14 +197,14 @@
         <Checksum>C1204D2423A97BA47CCE23A11DB53214</Checksum>
       </Template>
       <Template>
-        <Name>system_tasks.c</Name>
-        <Path>Source Files/app/system_config/configRover</Path>
-        <Checksum>E1A0BD4E512E8B1CE91B3262D18B6B0E</Checksum>
-      </Template>
-      <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/configRover</Path>
         <Checksum>59521047FD9F24B313C1AEC0A6D151DA</Checksum>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/configRover</Path>
+        <Checksum>E1A0BD4E512E8B1CE91B3262D18B6B0E</Checksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
@@ -217,9 +217,9 @@
         <Checksum>BDAE280569ED20E52D0025190D1E4BA1</Checksum>
       </Template>
       <Template>
-        <Name>system_definitions.h</Name>
-        <Path>Header Files/app/system_config/configRover</Path>
-        <Checksum>2A11EA7F50106852C9E375294A23691C</Checksum>
+        <Name>drv_tmr_static.c</Name>
+        <Path>Source Files/app/system_config/configRover/framework/driver/tmr/src</Path>
+        <Checksum>F14F79BF6034CD0309534ED34ADC2510</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.c</Name>
@@ -227,9 +227,17 @@
         <Checksum>1B968DA82B5DD869A6119C3B7628D753</Checksum>
       </Template>
       <Template>
-        <Name>drv_tmr_static.c</Name>
-        <Path>Source Files/app/system_config/configRover/framework/driver/tmr/src</Path>
-        <Checksum>F14F79BF6034CD0309534ED34ADC2510</Checksum>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/configRover</Path>
+        <Checksum>2A11EA7F50106852C9E375294A23691C</Checksum>
+      </Template>
+      <Template>
+        <Name>communication.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>motor.h</Name>
+        <Path>Header Files/app</Path>
       </Template>
       <Template>
         <Name>system_interrupt.c</Name>
@@ -237,20 +245,12 @@
         <Checksum>25B19983A61980AEFDB17C52E0A70169</Checksum>
       </Template>
       <Template>
-        <Name>motor.h</Name>
-        <Path>Header Files/app</Path>
-      </Template>
-      <Template>
-        <Name>communication.h</Name>
-        <Path>Header Files/app</Path>
+        <Name>motor.c</Name>
+        <Path>Source Files/app</Path>
       </Template>
       <Template>
         <Name>sensorCommunication.h</Name>
         <Path>Header Files/app</Path>
-      </Template>
-      <Template>
-        <Name>motor.c</Name>
-        <Path>Source Files/app</Path>
       </Template>
     </Templates>
     <CompilerItems>

@@ -53,6 +53,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+#include "map.h"
+
 #include "sensorcommunication.h"
 #include <stdint.h>
 #include <stdbool.h>
@@ -291,6 +293,14 @@ bool sensorcommunication_sensorIntQueueEmptyISR()
 
 void SENSORCOMMUNICATION_Initialize ( void )
 {
+    // the map.
+    int h = 0;
+    for (h; h < 75; h++)
+        theMap[h][25] = 1;
+    roverOrientation = 0;
+    roverLocation[0] = 0;
+    roverLocation[1] = 25;
+    
     /* Place the App state machine in its initial state. */
 	//initDebugU();
     sensor_debugTimerInit();
@@ -322,6 +332,7 @@ void SENSORCOMMUNICATION_Initialize ( void )
 
 void SENSORCOMMUNICATION_Tasks ( void )
 {
+    int roverSimCounter = 0;
 	while(1)
 	{
 		//check if queue exists
@@ -359,6 +370,7 @@ void SENSORCOMMUNICATION_Tasks ( void )
 						else if( sensorcommunicationData.sensorrxByteCount > 0)	//continuing message
 						{
 							sensorcommunicationData.sensorrxBuffer[sensorcommunicationData.sensorrxByteCount] = sensorcommunicationData.rxMessage.msg;
+                            debugUInt(CharToInt(sensorcommunicationData.rxMessage.msg));
 							sensorcommunicationData.sensorrxByteCount++;
 							if(sensorcommunicationData.sensorrxByteCount == 10)
 							{
@@ -390,8 +402,36 @@ void SENSORCOMMUNICATION_Tasks ( void )
 									y += CharToInt(sensorcommunicationData.sensorrxBuffer[8]) * 10;
 									y += CharToInt(sensorcommunicationData.sensorrxBuffer[9]);
 
-                                    communication_sendIntMsg(x, y);
+                                    if (x != 0 && y != 0)
+                                    {
+                                        roverLocation[0] = x;
+                                        roverLocation[1] = y;
+                                    }
                                     
+                                    communication_sendIntMsg(0, 1000);
+                                    
+//                                    else if (roverSimCounter < 11)
+//                                        communication_sendIntMsg(1, 1);
+//                                    else if (roverSimCounter == 2)
+//                                        communication_sendIntMsg(1, 10);
+//                                    else if (roverSimCounter == 3)
+//                                        communication_sendIntMsg(3, 1);
+//                                    else if (roverSimCounter == 4)
+//                                        communication_sendIntMsg(1, 6);
+//                                    else if (roverSimCounter == 5)
+//                                        communication_sendIntMsg(3, 1);
+//                                    else if (roverSimCounter == 6)
+//                                        communication_sendIntMsg(1, 10);
+//                                    else if (roverSimCounter == 7)
+//                                        communication_sendIntMsg(3, 1);
+//                                    else if (roverSimCounter == 8)
+//                                        communication_sendIntMsg(1, 4);
+//                                        
+//                                    else // Tel the rover to not do anything...
+//                                        communication_sendIntMsg(0, 0);
+                                    roverSimCounter++;
+                                    
+                                    debugUInt(roverSimCounter);
                                     debugU("sensor msg period: ");
                                     debugUInt(sensor_debugGetTime());
                                     
@@ -399,11 +439,11 @@ void SENSORCOMMUNICATION_Tasks ( void )
 									//char msg[12];
 									//sprintf(msg, "%d", x);
 									//debugU(msg);
-                                    debugUInt(x);
+                                    debugUInt(roverLocation[0]);
 									debugU("Sensor2: ");
 									//sprintf(msg, "%d", y);
 									//debugU(msg);
-                                    debugUInt(y);
+                                    debugUInt(roverLocation[1]);
                                     
                                     debugU("\n");
                                     
